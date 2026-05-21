@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const stats = [
   { value: "7",   label: "Bedrooms" },
@@ -27,11 +28,15 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[var(--color-forest)]" />
-        {/* Replace bg-color with bg-[url('/images/hero.jpg')] bg-cover bg-center once hero photo is added */}
-        <div className="absolute inset-0 bg-[var(--color-forest)]/70" />
+        <div className="absolute inset-0 bg-cover bg-center bg-[url('/images/hero-aerial.jpg')]" />
+        <div className="absolute inset-0 bg-[var(--color-forest)]/55" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="text-[var(--color-gold)] text-sm tracking-[0.3em] uppercase mb-6 font-sans">
+          <div className="flex justify-center mb-6">
+            <div className="bg-white/95 rounded-md p-3 shadow-lg">
+              <Image src="/images/logo.jpg" alt="Red Mountain Retreat" width={120} height={120} priority />
+            </div>
+          </div>
+          <p className="text-[var(--color-gold)] text-sm tracking-[0.3em] uppercase mb-4 font-sans">
             Maple Falls, Washington · Mt. Baker Country
           </p>
           <h1 className="font-display text-white text-6xl md:text-8xl font-light leading-tight mb-6">
@@ -81,6 +86,45 @@ export default function Home() {
           Seven bedrooms sleep fourteen. Three generations under one roof. Grandparents claim the king suite.
           Kids take the lounge. Everyone meets at the fire.
         </p>
+      </section>
+
+      {/* Great room photo — full bleed split */}
+      <section className="grid grid-cols-1 md:grid-cols-2">
+        <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[480px]">
+          <Image src="/images/great-room.jpg" alt="Great room with stone fireplace and full group gathering" fill className="object-cover" />
+        </div>
+        <div className="bg-[var(--color-forest)] flex items-center p-12 md:p-16">
+          <div>
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">The Great Room</p>
+            <h2 className="font-display text-4xl text-white font-light leading-tight mb-4">
+              Where the conversations go late and the fire keeps everyone close
+            </h2>
+            <p className="text-[var(--color-cream)]/70 font-sans text-sm leading-relaxed">
+              Log walls. Stone fireplace. A Steinway grand piano in the corner.
+              This room holds a group — and it knows it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Sauna photo — reversed split */}
+      <section className="grid grid-cols-1 md:grid-cols-2">
+        <div className="bg-[var(--color-bark)] flex items-center p-12 md:p-16 order-2 md:order-1">
+          <div>
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">Signature Feature</p>
+            <h2 className="font-display text-4xl text-white font-light leading-tight mb-4">
+              The Treehouse Sauna
+            </h2>
+            <p className="text-[var(--color-cream)]/70 font-sans text-sm leading-relaxed">
+              Cedar walls. Slate floors. Live-edge benches. Perched in the forest canopy
+              with a cold shower outside. Step out into mountain air at 40°F.
+              It changes your day.
+            </p>
+          </div>
+        </div>
+        <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[480px] order-1 md:order-2">
+          <Image src="/images/sauna-interior.jpg" alt="Treehouse sauna interior — cedar, slate, live-edge benches" fill className="object-cover" />
+        </div>
       </section>
 
       {/* Highlights */}

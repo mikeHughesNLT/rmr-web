@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const links = [
@@ -15,8 +16,13 @@ export default function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-forest)]/90 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="font-display text-[var(--color-cream)] text-xl tracking-wide hover:text-[var(--color-gold)] transition-colors">
-          Red Mountain Retreat
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="bg-white rounded-sm p-1">
+            <Image src="/images/logo.jpg" alt="Red Mountain Retreat" width={36} height={36} className="block" />
+          </div>
+          <span className="font-display text-[var(--color-cream)] text-lg tracking-wide group-hover:text-[var(--color-gold)] transition-colors hidden sm:block">
+            Red Mountain Retreat
+          </span>
         </Link>
 
         {/* Desktop nav */}
