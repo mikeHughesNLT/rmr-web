@@ -20,11 +20,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Red Mountain Retreat — Restore · Reconnect · Rise",
   description:
-    "7-bedroom mountain estate on 20 private acres near Mt. Baker, WA. Treehouse sauna, Steinway piano, stone fireplace. Sleeps 14. 52 min to Baker, 15 min to Canada.",
+    "7-bedroom mountain estate on 25 private acres near Mt. Baker, WA. Treehouse sauna, Steinway piano, stone fireplace. Sleeps 14. 52 min to Baker, 15 min to Canada.",
   keywords: "vacation rental, Mt Baker, Maple Falls, group retreat, Washington state, mountain lodge",
   openGraph: {
     title: "Red Mountain Retreat",
-    description: "20 acres. Treehouse sauna. Steinway piano. Sleeps 14.",
+    description: "25 acres. Treehouse sauna. Steinway piano. Sleeps 14.",
     type: "website",
   },
 };

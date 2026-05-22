@@ -83,7 +83,7 @@ export default function BookPage() {
         <div className="mt-8 p-5 bg-[var(--color-cream-dark)] text-sm font-sans text-[var(--color-bark)]/70">
           <strong className="text-[var(--color-forest)]">Dogs welcome.</strong>{" "}
           $35/night per dog (max 2), $200 refundable deposit. Dogs must be 1yr+.
-          20 acres of trails — a dog&apos;s paradise.
+          25 acres of trails — a dog&apos;s paradise.
         </div>
       </div>
     </div>

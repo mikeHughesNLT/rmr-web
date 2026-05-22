@@ -4,7 +4,7 @@ const places = [
   { distance: "45 min",  name: "Bellingham",              desc: "Full grocery stores, restaurants, breweries, Whatcom Falls Park, waterfront. Your supply run and a great day trip." },
   { distance: "20 min",  name: "Glacier, WA",             desc: "The charming mountain village at the edge of something bigger. Last stop before the mountain." },
   { distance: "Minutes", name: "Silver Lake Park",        desc: "Kayaking, fishing, swimming, picnicking right in the neighborhood." },
-  { distance: "On-site", name: "Red Mountain Trails",     desc: "Private hiking trails winding through 20 acres of old-growth forest and up Red Mountain itself." },
+  { distance: "On-site", name: "Red Mountain Trails",     desc: "Private hiking trails winding through 25 acres of old-growth forest and up Red Mountain itself." },
 ];
 
 export default function LocationPage() {

@@ -14,7 +14,7 @@ const highlights = [
   { icon: "🎹", title: "Steinway Piano",     desc: "Concert grand anchoring the great room beside a stone fireplace." },
   { icon: "🏔️", title: "52 Min to Baker",   desc: "Deep powder, legendary snowfall, uncrowded runs." },
   { icon: "🍁", title: "15 Min to Canada",  desc: "Abbotsford crossing. Vancouver day trips are very doable." },
-  { icon: "🐾", title: "Dog Friendly",      desc: "20 acres of forest trails. A dog's paradise." },
+  { icon: "🐾", title: "Dog Friendly",      desc: "25 acres of forest trails. A dog's paradise." },
   { icon: "⚡", title: "Starlink Wifi",     desc: "Full-speed internet everywhere — including the sauna." },
 ];
 
@@ -94,7 +94,7 @@ export default function Home() {
           This isn&apos;t a rental.<br />It&apos;s where your people come back together.
         </h2>
         <p className="text-[var(--color-bark)]/80 text-lg leading-relaxed max-w-2xl mx-auto font-sans">
-          A 6,000 sq ft mountain lodge — plus an 840 sq ft Flex Room — on 20 private acres in Maple Falls, WA near the base of Mt. Baker.
+          A 6,000 sq ft mountain lodge — plus an 840 sq ft Flex Room — on 25 private acres in Maple Falls, WA near the base of Mt. Baker.
           Seven bedrooms sleep fourteen. Three generations under one roof. Grandparents claim the king suite.
           Kids take the lounge. Everyone meets at the fire.
         </p>

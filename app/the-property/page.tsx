@@ -11,7 +11,7 @@ const rooms = [
 const amenities = [
   "Stone fireplace great room", "Steinway grand piano", "Family lounge — oversized sectional + smart TV",
   "Full kitchen — large group ready", "Treehouse sauna + cold shower", "Pool table",
-  "Private hiking trails (20 acres)", "Expansive lawn + fire pit", "Multiple decks + seating nooks",
+  "Private hiking trails (25 acres)", "Expansive lawn + fire pit", "Multiple decks + seating nooks",
   "Washer + dryer", "Starlink wifi (lodge + sauna)", "Smart lock — no key exchange",
   "Free parking (6+ vehicles)", "Firewood included", "Dog kennels available",
   "Nook & Flex Room — 840 sq ft activity space",
@@ -25,7 +25,7 @@ const gallery = [
   { src: "/images/kitchen.jpg",       alt: "Full kitchen — large group ready" },
   { src: "/images/dining.jpg",        alt: "Dining area" },
   { src: "/images/master-bath.jpg",   alt: "Master bathroom" },
-  { src: "/images/group-outside.jpg", alt: "Group on the grounds — 20 acres of outdoor space", wide: true },
+  { src: "/images/group-outside.jpg", alt: "Group on the grounds — 25 acres of outdoor space", wide: true },
   { src: "/images/trails.jpg",        alt: "Private trails through old-growth forest" },
   { src: "/images/exterior-02.jpg",   alt: "Property exterior" },
 ];
@@ -38,7 +38,7 @@ export default function ThePropertyPage() {
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">The Property</p>
         <h1 className="font-display text-6xl text-[var(--color-forest)] font-light leading-tight mb-6">
-          6,000 sq ft lodge + 840 sq ft Flex Room on 20 private acres
+          6,000 sq ft lodge + 840 sq ft Flex Room on 25 private acres
         </h1>
         <p className="text-[var(--color-bark)]/70 text-lg leading-relaxed font-sans max-w-2xl mx-auto">
           Rich leathers, warm woods, deep greens, and cozy textures throughout.
