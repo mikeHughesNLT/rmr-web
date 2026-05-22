@@ -1,29 +1,28 @@
 import Script from "next/script";
-import HospitableWidget from "@/components/HospitableWidget";
 import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 
 export default function BookPage() {
   return (
     <div className="pt-24 min-h-screen bg-[var(--color-cream)]">
-      {/* Pass URL search params into the booking iframe once it loads */}
+      {/* Pre-fill iframe dates from URL params (?checkin=&checkout=&adults=...) */}
       <Script id="hospitable-params" strategy="afterInteractive">{`
-        function getQueryParams(param) {
-          const urlSearchParams = new URLSearchParams(window.location.search);
-          return urlSearchParams.get(param);
-        }
         function updateIframeSrc() {
           const iframe = document.getElementById("booking-iframe");
           if (!iframe) return;
-          const checkin  = getQueryParams("checkin");
-          const checkout = getQueryParams("checkout");
-          const adults   = getQueryParams("adults");
-          const children = getQueryParams("children");
-          const infants  = getQueryParams("infants");
-          const pets     = getQueryParams("pets");
-          let newSrc = iframe.src;
-          newSrc += newSrc.includes("?") ? "&" : "?";
-          newSrc += \`checkin=\${checkin}&checkout=\${checkout}&adults=\${adults}&children=\${children}&infants=\${infants}&pets=\${pets}\`;
-          iframe.src = newSrc;
+          const p = new URLSearchParams(window.location.search);
+          const checkin  = p.get("checkin");
+          const checkout = p.get("checkout");
+          if (!checkin || !checkout) return;
+          const params = new URLSearchParams({
+            checkin,
+            checkout,
+            adults:   p.get("adults")   || "",
+            children: p.get("children") || "",
+            infants:  p.get("infants")  || "",
+            pets:     p.get("pets")     || "",
+          });
+          const base = iframe.src.split("?")[0];
+          iframe.src = base + "?" + params.toString();
         }
         window.addEventListener("load", updateIframeSrc);
       `}</Script>
@@ -43,9 +42,15 @@ export default function BookPage() {
         {/* Availability calendar — live from hospitable API */}
         <AvailabilityCalendar />
 
-        {/* Hospitable booking widget */}
-        <div className="mt-8">
-          <HospitableWidget className="min-h-32" />
+        {/* Hospitable booking checkout iframe */}
+        <div className="mt-10">
+          <iframe
+            id="booking-iframe"
+            sandbox="allow-top-navigation allow-scripts allow-same-origin"
+            style={{ width: "100%", height: "900px" }}
+            frameBorder={0}
+            src="https://booking.hospitable.com/widget/a1d62494-3545-4d00-a069-f863b24abc03/2190928"
+          />
         </div>
 
         {/* Details */}
