@@ -1,5 +1,6 @@
 import Script from "next/script";
 import HospitableWidget from "@/components/HospitableWidget";
+import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 
 export default function BookPage() {
   return (
@@ -39,8 +40,13 @@ export default function BookPage() {
           From $898/night · Sleeps 14 · 7 bedrooms · 3.5 baths
         </p>
 
-        {/* Booking widget */}
-        <HospitableWidget className="min-h-96" />
+        {/* Availability calendar — live from hospitable API */}
+        <AvailabilityCalendar />
+
+        {/* Hospitable booking widget */}
+        <div className="mt-8">
+          <HospitableWidget className="min-h-32" />
+        </div>
 
         {/* Details */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm font-sans">
