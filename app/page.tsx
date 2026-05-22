@@ -29,7 +29,13 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-[url('/images/hero-aerial.jpg')]" />
+        <video
+          autoPlay muted loop playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="/images/hero-aerial.jpg"
+        >
+          <source src="/videos/inway.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-[var(--color-forest)]/55" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className="flex justify-center mb-8">
