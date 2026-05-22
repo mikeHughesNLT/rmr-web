@@ -7,7 +7,7 @@ export default function Footer() {
         <div>
           <p className="font-display text-[var(--color-cream)] text-lg mb-2">Red Mountain Retreat</p>
           <p className="text-sm">Restore · Reconnect · Rise</p>
-          <p className="text-sm mt-3">9580 Red Mountain Lane<br />Maple Falls, WA 98266</p>
+          <p className="text-sm mt-3">Near Silver Lake<br />Maple Falls, WA 98266</p>
         </div>
         <div>
           <p className="text-xs tracking-widest uppercase mb-4 text-[var(--color-gold)]">Explore</p>

@@ -25,13 +25,8 @@ export default function LocationPage() {
       <section className="max-w-7xl mx-auto px-6 mb-16">
         <div className="bg-[var(--color-forest)]/10 h-72 flex items-center justify-center">
           <div className="text-center font-sans text-sm text-[var(--color-bark)]/40">
-            <p>9580 Red Mountain Lane, Maple Falls, WA 98266</p>
-            <a
-              href="https://maps.google.com/?q=9580+Red+Mountain+Lane+Maple+Falls+WA+98266"
-              target="_blank" rel="noopener noreferrer"
-              className="text-[var(--color-gold)] hover:underline mt-2 inline-block">
-              Open in Google Maps →
-            </a>
+            <p>Near Silver Lake · Maple Falls, WA</p>
+            <p className="mt-1 opacity-70">Exact address provided upon booking confirmation</p>
           </div>
         </div>
       </section>

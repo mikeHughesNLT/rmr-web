@@ -9,11 +9,10 @@ export default function ContactPage() {
         </p>
 
         <form
-          action="https://formsubmit.co/your-email@example.com"
+          action="https://formsubmit.co/runliftrun@gmail.com"
           method="POST"
           className="space-y-6"
         >
-          {/* Replace with your actual email above, or wire up a server action */}
           <input type="hidden" name="_subject" value="RMR Inquiry — Red Mountain Retreat" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="/contact?sent=true" />

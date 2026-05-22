@@ -4,32 +4,32 @@ const useCases = [
   {
     icon: "🏢",
     title: "Conferences & Offsites",
-    desc: "840 sq ft of open floor space — enough for a full team circle, breakout tables, presentation setup, or a standing workshop. Away from the distractions of a hotel ballroom.",
+    desc: "840 sq ft of open floor space — enough for a full team circle, breakout tables, or presentation setup. Three large rollup doors open the whole room to fresh mountain air. Away from hotel conference rooms forever.",
   },
   {
     icon: "🧒",
     title: "Kids Zone",
-    desc: "Give the adults the great room. The Nook keeps kids active, loud, and in their own world — with enough space that it actually works.",
+    desc: "Give the adults the great room. The Nook keeps kids active, loud, and in their own world — with enough space that it actually works. Inflatable furniture, room to run, real kids-paradise energy.",
   },
   {
     icon: "🤸",
     title: "Movement & Fitness",
-    desc: "Open floor, high ceiling, room to move. Yoga, CrossFit-style circuits, dance, stretching, martial arts. Wrestling mats arriving Summer 2026.",
+    desc: "Open floor, high ceiling, room to move. Yoga, stretching, CrossFit-style circuits, combatives, dance, martial arts. Wrestling mats arriving late Summer 2026.",
+  },
+  {
+    icon: "🎬",
+    title: "Movie Nights",
+    desc: "Drop down the 120\" projection screen. Pull out the inflatable furniture. Crank the in-wall ceiling speakers. With the heat running and rollup doors cracked to the forest — there's nothing like it.",
   },
   {
     icon: "🧘",
     title: "Wellness Retreats",
-    desc: "Morning practice before the treehouse sauna. Breathwork, meditation, group movement. The forest outside keeps things grounded.",
-  },
-  {
-    icon: "🎨",
-    title: "Creative & Art Space",
-    desc: "A blank canvas — literally. 840 sq ft of open space can become whatever your group needs it to be.",
+    desc: "Morning practice before the treehouse sauna. Breathwork, meditation, group movement. Rustic log perimeter walls and natural light keep the energy grounded.",
   },
   {
     icon: "🏋️",
     title: "Sports & Training Camps",
-    desc: "Wrestling mats coming Summer 2026. Coach a team, run drills, train together — then recover in the treehouse sauna.",
+    desc: "Wrestling mats arriving late Summer 2026. Coach a team, run drills, train together — then recover in the treehouse sauna. The only facility like this at a retreat property in the Mt. Baker area.",
   },
 ];
 
@@ -59,33 +59,58 @@ export default function TheNookPage() {
         </div>
       </section>
 
-      {/* What it is */}
+      {/* Stats bar */}
       <section className="max-w-4xl mx-auto px-6 pb-12">
         <div className="bg-[var(--color-forest)] text-[var(--color-cream)] p-10 mb-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <p className="font-display text-4xl text-[var(--color-gold)]">840</p>
               <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Sq Ft</p>
             </div>
             <div>
-              <p className="font-display text-4xl text-[var(--color-gold)]">Open</p>
-              <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Floor Plan</p>
+              <p className="font-display text-4xl text-[var(--color-gold)]">3</p>
+              <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Rollup Doors</p>
             </div>
             <div>
-              <p className="font-display text-4xl text-[var(--color-gold)]">Summer</p>
-              <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Wrestling Mats 2026</p>
+              <p className="font-display text-4xl text-[var(--color-gold)]">120″</p>
+              <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Drop Screen</p>
+            </div>
+            <div>
+              <p className="font-display text-3xl text-[var(--color-gold)]">Summer</p>
+              <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Mats &apos;26</p>
             </div>
           </div>
         </div>
 
         <p className="text-[var(--color-bark)]/80 text-lg leading-relaxed font-sans mb-6">
-          The Nook is a former 840 sq ft shop — completely cleared and opened up into a flex room
-          unlike anything you&apos;ll find in a vacation rental. High ceiling, clean floor, natural light.
+          The Nook is a former 840 sq ft shop — completely cleared and opened into a flex room
+          unlike anything you&apos;ll find in a vacation rental. High ceiling, clean floor, natural light,
+          and a rustic log perimeter wall that keeps the mountain atmosphere alive.
           It&apos;s the space that makes Red Mountain Retreat work for groups who need to actually <em>do</em> something,
           not just sit around.
         </p>
+
+        {/* Feature list */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+          {[
+            "Three large panel rollup doors — open to the outdoors",
+            "120\" drop-down projection screen",
+            "In-wall ceiling speakers throughout",
+            "Climate controlled with heat",
+            "Inflatable furniture available for movies & lounging",
+            "Rustic log perimeter wall — scenically mountain",
+            "Open floor plan — no fixed obstacles",
+            "High ceiling for movement and sports",
+          ].map(f => (
+            <div key={f} className="flex items-start gap-3 py-2 border-b border-[var(--color-cream-dark)]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)] flex-shrink-0 mt-2" />
+              <span className="text-sm font-sans text-[var(--color-bark)]/80">{f}</span>
+            </div>
+          ))}
+        </div>
+
         <p className="text-[var(--color-bark)]/70 text-base leading-relaxed font-sans">
-          Wrestling mats are arriving <strong>Summer 2026</strong> — making it the only retreat property
+          Wrestling mats are arriving <strong>late Summer 2026</strong> — making it the only retreat property
           in the Mt. Baker area with a dedicated wrestling and grappling space. Coaches, wrestling camps,
           BJJ squads: this is your facility.
         </p>
@@ -109,7 +134,7 @@ export default function TheNookPage() {
         </div>
       </section>
 
-      {/* Combined with sauna */}
+      {/* Train + Recover */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <h2 className="font-display text-4xl text-[var(--color-forest)] mb-4">
           Train in the Nook. Recover in the Sauna.
