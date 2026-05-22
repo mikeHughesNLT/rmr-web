@@ -32,10 +32,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-cover bg-center bg-[url('/images/hero-aerial.jpg')]" />
         <div className="absolute inset-0 bg-[var(--color-forest)]/55" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <div className="flex justify-center mb-6">
-            <div className="bg-white/95 rounded-md p-3 shadow-lg">
-              <Image src="/images/logo.png" alt="Red Mountain Retreat" width={120} height={120} priority />
-            </div>
+          <div className="flex justify-center mb-8">
+            <Image src="/images/logo.png" alt="Red Mountain Retreat" width={180} height={180} priority className="brightness-0 invert" />
           </div>
           <p className="text-[var(--color-gold)] text-sm tracking-[0.3em] uppercase mb-4 font-sans">
             Maple Falls, Washington · Mt. Baker Country
