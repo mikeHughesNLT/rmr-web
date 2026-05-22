@@ -100,6 +100,14 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Forest canopy video — full bleed */}
+      <section className="relative h-64 md:h-96 overflow-hidden">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="/videos/in-2sky.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[var(--color-forest)]/20" />
+      </section>
+
       {/* Great room photo — full bleed split */}
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[480px]">
