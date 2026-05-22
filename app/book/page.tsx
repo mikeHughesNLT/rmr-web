@@ -1,29 +1,33 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// TO ACTIVATE THE BOOKING WIDGET:
-//
-// 1. Go to: my.hospitable.com → Direct Bookings → Website
-// 2. Make sure "Direct" channel is enabled (enable Direct Premium for USA)
-// 3. In the Properties section, find Red Mountain Retreat → "Copy widget code"
-// 4. Replace the WIDGET_EMBED_CODE placeholder below with your <script> tag
-//
-// The widget syncs automatically with Airbnb/VRBO calendars — no double bookings.
-// ─────────────────────────────────────────────────────────────────────────────
-
-// Swap this to "true" once the widget code is pasted in below
-const WIDGET_ACTIVE = false;
-
-// Paste the full <script ...></script> tag from hospitable here:
-const WIDGET_EMBED_CODE = `
-  <!-- paste hospitable widget <script> tag here -->
-`;
-
 import Script from "next/script";
+import HospitableWidget from "@/components/HospitableWidget";
 
 export default function BookPage() {
   return (
     <div className="pt-24 min-h-screen bg-[var(--color-cream)]">
-      <div className="max-w-4xl mx-auto px-6 py-16">
+      {/* Pass URL search params into the booking iframe once it loads */}
+      <Script id="hospitable-params" strategy="afterInteractive">{`
+        function getQueryParams(param) {
+          const urlSearchParams = new URLSearchParams(window.location.search);
+          return urlSearchParams.get(param);
+        }
+        function updateIframeSrc() {
+          const iframe = document.getElementById("booking-iframe");
+          if (!iframe) return;
+          const checkin  = getQueryParams("checkin");
+          const checkout = getQueryParams("checkout");
+          const adults   = getQueryParams("adults");
+          const children = getQueryParams("children");
+          const infants  = getQueryParams("infants");
+          const pets     = getQueryParams("pets");
+          let newSrc = iframe.src;
+          newSrc += newSrc.includes("?") ? "&" : "?";
+          newSrc += \`checkin=\${checkin}&checkout=\${checkout}&adults=\${adults}&children=\${children}&infants=\${infants}&pets=\${pets}\`;
+          iframe.src = newSrc;
+        }
+        window.addEventListener("load", updateIframeSrc);
+      `}</Script>
 
+      <div className="max-w-4xl mx-auto px-6 py-16">
         <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">Book Direct</p>
         <h1 className="font-display text-5xl text-[var(--color-forest)] font-light mb-4">
           Check Availability
@@ -36,41 +40,7 @@ export default function BookPage() {
         </p>
 
         {/* Booking widget */}
-        {WIDGET_ACTIVE ? (
-          <>
-            <div id="hospitable-widget" className="min-h-96" />
-            <Script
-              id="hospitable-booking"
-              strategy="afterInteractive"
-              dangerouslySetInnerHTML={{ __html: WIDGET_EMBED_CODE }}
-            />
-          </>
-        ) : (
-          /* Temporary CTA until widget is activated */
-          <div className="bg-white border border-[var(--color-cream-dark)] p-10 text-center">
-            <p className="font-display text-3xl text-[var(--color-forest)] mb-4">
-              Ready to book?
-            </p>
-            <p className="text-[var(--color-bark)]/60 font-sans text-sm mb-8 max-w-md mx-auto">
-              Direct booking is coming soon — for now, check availability and book on Airbnb,
-              or reach out directly to discuss your dates.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://www.airbnb.com/rooms/1626988366545015306"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[var(--color-gold)] text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-[var(--color-gold-light)] transition-colors font-sans">
-                View on Airbnb
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-[var(--color-forest)] text-[var(--color-forest)] px-8 py-4 text-sm tracking-widest uppercase hover:bg-[var(--color-forest)] hover:text-white transition-colors font-sans">
-                Contact Us Directly
-              </a>
-            </div>
-          </div>
-        )}
+        <HospitableWidget className="min-h-96" />
 
         {/* Details */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm font-sans">
@@ -94,7 +64,6 @@ export default function BookPage() {
           $35/night per dog (max 2), $200 refundable deposit. Dogs must be 1yr+.
           20 acres of trails — a dog&apos;s paradise.
         </div>
-
       </div>
     </div>
   );

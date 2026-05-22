@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import HospitableWidget from "@/components/HospitableWidget";
 
 const stats = [
   { value: "7",   label: "Bedrooms" },
@@ -33,7 +34,7 @@ export default function Home() {
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <div className="flex justify-center mb-6">
             <div className="bg-white/95 rounded-md p-3 shadow-lg">
-              <Image src="/images/logo.jpg" alt="Red Mountain Retreat" width={120} height={120} priority />
+              <Image src="/images/logo.png" alt="Red Mountain Retreat" width={120} height={120} priority />
             </div>
           </div>
           <p className="text-[var(--color-gold)] text-sm tracking-[0.3em] uppercase mb-4 font-sans">
@@ -60,6 +61,13 @@ export default function Home() {
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
           </svg>
+        </div>
+      </section>
+
+      {/* Search widget */}
+      <section className="bg-[var(--color-forest)] border-t border-white/10">
+        <div className="max-w-5xl mx-auto px-6 py-8">
+          <HospitableWidget resultsUrl="/search" />
         </div>
       </section>
 
