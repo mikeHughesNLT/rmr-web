@@ -39,11 +39,21 @@ export default function BookPage() {
           From $898/night · Sleeps 14 · 7 bedrooms · 3.5 baths
         </p>
 
-        {/* Availability calendar — live from hospitable API */}
+        {/* Step 1 */}
+        <div className="flex items-center gap-4 mb-3">
+          <span className="bg-[var(--color-forest)] text-[var(--color-gold)] text-xs font-sans tracking-widest uppercase px-3 py-1">Step 1</span>
+          <p className="text-sm font-sans text-[var(--color-bark)]/60">Check which dates are open — white = available, grey = booked</p>
+        </div>
         <AvailabilityCalendar />
 
+        {/* Step 2 */}
+        <div className="flex items-center gap-4 mt-12 mb-3">
+          <span className="bg-[var(--color-gold)] text-white text-xs font-sans tracking-widest uppercase px-3 py-1">Step 2</span>
+          <p className="text-sm font-sans text-[var(--color-bark)]/60">Select your dates below and complete your booking</p>
+        </div>
+
         {/* Hospitable booking checkout iframe */}
-        <div className="mt-10">
+        <div>
           <iframe
             id="booking-iframe"
             sandbox="allow-top-navigation allow-scripts allow-same-origin"
