@@ -1,23 +1,39 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const rooms = [
-  { name: "Primary King Suite",  desc: "Ground floor. Wood-burning fireplace, seating area, vanity." },
-  { name: "3 Additional Kings",  desc: "Premium mattresses, luxury linens, forested views." },
-  { name: "2 Queen Bedrooms",    desc: "One ground floor with attached half bath — perfect for grandparents." },
+  { name: "Primary King Suite",  desc: "Ground floor. Wood-burning fireplace, seating area, vanity. Premium mattresses, luxury linens." },
+  { name: "3 Additional Kings",  desc: "Premium mattresses, luxury linens, forested views from every window." },
+  { name: "2 Queen Bedrooms",    desc: "One ground floor with attached half bath — single-level access for grandparents." },
   { name: "Twin XL Room",        desc: "Two twin XL beds upstairs — ideal for kids or additional guests." },
 ];
 
 const amenities = [
-  "Stone fireplace great room", "Steinway grand piano", "Family lounge with sectional + smart TV",
+  "Stone fireplace great room", "Steinway grand piano", "Family lounge — oversized sectional + smart TV",
   "Full kitchen — large group ready", "Treehouse sauna + cold shower", "Pool table",
-  "Private hiking trails (20 acres)", "Expansive lawn + fire pit", "Multiple decks",
-  "Washer + dryer", "Starlink wifi (including sauna)", "Smart lock check-in",
+  "Private hiking trails (20 acres)", "Expansive lawn + fire pit", "Multiple decks + seating nooks",
+  "Washer + dryer", "Starlink wifi (lodge + sauna)", "Smart lock — no key exchange",
   "Free parking (6+ vehicles)", "Firewood included", "Dog kennels available",
+  "Nook & Flex Room — 840 sq ft activity space",
+];
+
+const gallery = [
+  { src: "/images/great-room.jpg",    alt: "Great room — stone fireplace, log walls, full group gathering", wide: true },
+  { src: "/images/sauna-interior.jpg",alt: "Treehouse sauna interior — cedar, slate, live-edge benches" },
+  { src: "/images/house-front.jpg",   alt: "Lodge exterior — cedar siding, moss trees, green lawn" },
+  { src: "/images/bedroom-01.jpg",    alt: "King bedroom — barn door, hardwood floors, forest views" },
+  { src: "/images/kitchen.jpg",       alt: "Full kitchen — large group ready" },
+  { src: "/images/dining.jpg",        alt: "Dining area" },
+  { src: "/images/master-bath.jpg",   alt: "Master bathroom" },
+  { src: "/images/group-outside.jpg", alt: "Group on the grounds — 20 acres of outdoor space", wide: true },
+  { src: "/images/trails.jpg",        alt: "Private trails through old-growth forest" },
+  { src: "/images/exterior-02.jpg",   alt: "Property exterior" },
 ];
 
 export default function ThePropertyPage() {
   return (
     <div className="pt-24 bg-[var(--color-cream)]">
+
       {/* Header */}
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">The Property</p>
@@ -30,10 +46,23 @@ export default function ThePropertyPage() {
         </p>
       </section>
 
-      {/* Photo placeholder — replace with actual gallery */}
-      <section className="max-w-7xl mx-auto px-6 mb-16">
-        <div className="bg-[var(--color-forest)]/10 aspect-video flex items-center justify-center">
-          <p className="text-[var(--color-bark)]/30 font-sans text-sm">Photo gallery — add images to public/images/</p>
+      {/* Photo gallery grid */}
+      <section className="max-w-7xl mx-auto px-6 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          {gallery.map((img, i) => (
+            <div
+              key={img.src}
+              className={`relative overflow-hidden ${img.wide ? "col-span-2" : ""} ${i === 0 ? "aspect-[16/9]" : "aspect-square"}`}
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          ))}
         </div>
       </section>
 
@@ -50,16 +79,20 @@ export default function ThePropertyPage() {
         </div>
       </section>
 
-      {/* Treehouse Sauna feature */}
-      <section className="bg-[var(--color-forest)] text-[var(--color-cream)] py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">Signature Feature</p>
-          <h2 className="font-display text-5xl font-light mb-6">The Treehouse Sauna</h2>
-          <p className="text-[var(--color-cream)]/80 text-lg leading-relaxed font-sans max-w-2xl mx-auto">
-            A custom-built sauna perched in the trees above the forest floor, with a cold shower and
-            mountain views. Step out of the heat into the cold air among the canopy.
-            Whether for recovery, reflection, or a reset after a day on the mountain — it changes your day.
-          </p>
+      {/* Treehouse Sauna — photo + text */}
+      <section className="grid grid-cols-1 md:grid-cols-2">
+        <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[440px]">
+          <Image src="/images/sauna-interior.jpg" alt="Treehouse sauna interior" fill className="object-cover" />
+        </div>
+        <div className="bg-[var(--color-forest)] flex items-center p-12 md:p-16">
+          <div>
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">Signature Feature</p>
+            <h2 className="font-display text-4xl text-white font-light leading-tight mb-4">The Treehouse Sauna</h2>
+            <p className="text-[var(--color-cream)]/70 font-sans text-sm leading-relaxed">
+              Custom-built cedar sauna perched in the forest canopy — slate floors, live-edge benches,
+              glowing rocks. Cold shower outside. Step into 40°F mountain air. It changes your day.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -76,15 +109,15 @@ export default function ThePropertyPage() {
         </div>
       </section>
 
-      {/* The Nook CTA */}
+      {/* Nook & Flex Room CTA */}
       <section className="bg-[var(--color-cream-dark)] py-16 px-6 text-center">
-        <h2 className="font-display text-4xl text-[var(--color-forest)] mb-4">Plus: The Nook</h2>
+        <h2 className="font-display text-4xl text-[var(--color-forest)] mb-4">Plus: The Nook &amp; Flex Room</h2>
         <p className="text-[var(--color-bark)]/70 font-sans mb-6 max-w-xl mx-auto">
-          840 sq ft flex room — perfect for groups, retreats, and active getaways.
+          840 sq ft of open space — conferences, kids, retreats, and more. Wrestling mats coming Summer 2026.
         </p>
         <Link href="/the-nook"
           className="border-2 border-[var(--color-forest)] text-[var(--color-forest)] px-8 py-3 text-sm tracking-widest uppercase hover:bg-[var(--color-forest)] hover:text-white transition-colors font-sans inline-block">
-          Explore The Nook
+          Explore the Nook &amp; Flex Room
         </Link>
       </section>
     </div>

@@ -13,7 +13,7 @@ export default function Footer() {
           <p className="text-xs tracking-widest uppercase mb-4 text-[var(--color-gold)]">Explore</p>
           <nav className="flex flex-col gap-2 text-sm">
             <Link href="/the-property" className="hover:text-[var(--color-cream)] transition-colors">The Property</Link>
-            <Link href="/the-nook"     className="hover:text-[var(--color-cream)] transition-colors">The Nook</Link>
+            <Link href="/the-nook"     className="hover:text-[var(--color-cream)] transition-colors">Nook &amp; Flex Room</Link>
             <Link href="/location"     className="hover:text-[var(--color-cream)] transition-colors">Location</Link>
             <Link href="/contact"      className="hover:text-[var(--color-cream)] transition-colors">Contact</Link>
           </nav>
