@@ -38,7 +38,7 @@ export default function ThePropertyPage() {
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">The Property</p>
         <h1 className="font-display text-6xl text-[var(--color-forest)] font-light leading-tight mb-6">
-          6,500 sq ft on 20 private acres
+          6,000 sq ft lodge + 840 sq ft Flex Room on 20 private acres
         </h1>
         <p className="text-[var(--color-bark)]/70 text-lg leading-relaxed font-sans max-w-2xl mx-auto">
           Rich leathers, warm woods, deep greens, and cozy textures throughout.

@@ -94,7 +94,7 @@ export default function Home() {
           This isn&apos;t a rental.<br />It&apos;s where your people come back together.
         </h2>
         <p className="text-[var(--color-bark)]/80 text-lg leading-relaxed max-w-2xl mx-auto font-sans">
-          A 6,500 sq ft mountain lodge on 20 private acres in Maple Falls, WA — near the base of Mt. Baker.
+          A 6,000 sq ft mountain lodge — plus an 840 sq ft Flex Room — on 20 private acres in Maple Falls, WA near the base of Mt. Baker.
           Seven bedrooms sleep fourteen. Three generations under one roof. Grandparents claim the king suite.
           Kids take the lounge. Everyone meets at the fire.
         </p>
