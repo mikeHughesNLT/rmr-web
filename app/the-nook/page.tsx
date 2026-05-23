@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FlexHero from "./FlexHero";
 
 const useCases = [
   {
@@ -49,15 +50,8 @@ export default function TheNookPage() {
         </p>
       </section>
 
-      {/* Photo placeholder */}
-      <section className="max-w-7xl mx-auto px-6 mb-16">
-        <div className="bg-[var(--color-forest)]/10 aspect-video flex items-center justify-center">
-          <div className="text-center font-sans text-sm text-[var(--color-bark)]/40">
-            <p className="text-lg mb-1">Photos coming soon</p>
-            <p>Drop Nook photos into assets/ and we&apos;ll get them on the site</p>
-          </div>
-        </div>
-      </section>
+      {/* Video hero */}
+      <FlexHero />
 
       {/* Stats bar */}
       <section className="max-w-4xl mx-auto px-6 pb-12">
