@@ -1,4 +1,6 @@
-export default function ContactPage() {
+export default function ContactPage({ searchParams }: { searchParams: { sent?: string } }) {
+  const sent = searchParams?.sent === "true";
+
   return (
     <div className="pt-24 bg-[var(--color-cream)] min-h-screen">
       <div className="max-w-3xl mx-auto px-6 py-16">
@@ -8,14 +10,24 @@ export default function ContactPage() {
           Planning a retreat, celebration, or group stay? We love the creative ones — reach out and let&apos;s talk.
         </p>
 
+        {sent ? (
+          <div className="bg-[var(--color-forest)] text-[var(--color-cream)] p-10">
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-3 font-sans">Message Received</p>
+            <h2 className="font-display text-3xl font-light mb-3">We&apos;ll be in touch soon.</h2>
+            <p className="font-sans text-[var(--color-cream)]/70 text-sm">
+              Mike typically responds within a few hours. In the meantime, feel free to{" "}
+              <a href="/book" className="text-[var(--color-gold)] hover:underline">check availability</a>.
+            </p>
+          </div>
+        ) : (
         <form
           action="https://formsubmit.co/runliftrun@gmail.com"
           method="POST"
           className="space-y-6"
         >
-          <input type="hidden" name="_subject" value="RMR Inquiry — Red Mountain Retreat" />
+          <input type="hidden" name="_subject" value="🏔 NEW INQUIRY — Red Mountain Retreat" />
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="/contact?sent=true" />
+          <input type="hidden" name="_next" value="https://stayredmountain.com/contact?sent=true" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -64,6 +76,7 @@ export default function ContactPage() {
             Send Message
           </button>
         </form>
+        )}
       </div>
     </div>
   );

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import HospitableWidget from "@/components/HospitableWidget";
 
 const stats = [
   { value: "7",   label: "Bedrooms" },
@@ -65,13 +64,6 @@ export default function Home() {
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
           </svg>
-        </div>
-      </section>
-
-      {/* Search widget */}
-      <section className="bg-[var(--color-forest)] border-t border-white/10">
-        <div className="max-w-5xl mx-auto px-6 py-8">
-          <HospitableWidget resultsUrl="/search" />
         </div>
       </section>
 
