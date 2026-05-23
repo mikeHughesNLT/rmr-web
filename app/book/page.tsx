@@ -1,33 +1,10 @@
-import Script from "next/script";
 import AvailabilityCalendar from "@/components/AvailabilityCalendar";
 
 export default function BookPage() {
   return (
     <div className="pt-24 min-h-screen bg-[var(--color-cream)]">
-      {/* Pre-fill iframe dates from URL params (?checkin=&checkout=&adults=...) */}
-      <Script id="hospitable-params" strategy="afterInteractive">{`
-        function updateIframeSrc() {
-          const iframe = document.getElementById("booking-iframe");
-          if (!iframe) return;
-          const p = new URLSearchParams(window.location.search);
-          const checkin  = p.get("checkin");
-          const checkout = p.get("checkout");
-          if (!checkin || !checkout) return;
-          const params = new URLSearchParams({
-            checkin,
-            checkout,
-            adults:   p.get("adults")   || "",
-            children: p.get("children") || "",
-            infants:  p.get("infants")  || "",
-            pets:     p.get("pets")     || "",
-          });
-          const base = iframe.src.split("?")[0];
-          iframe.src = base + "?" + params.toString();
-        }
-        window.addEventListener("load", updateIframeSrc);
-      `}</Script>
-
       <div className="max-w-4xl mx-auto px-6 py-16">
+
         <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">Book Direct</p>
         <h1 className="font-display text-5xl text-[var(--color-forest)] font-light mb-4">
           Check Availability
@@ -39,29 +16,7 @@ export default function BookPage() {
           From $898/night · Sleeps 14 · 7 bedrooms · 3.5 baths
         </p>
 
-        {/* Step 1 */}
-        <div className="flex items-center gap-4 mb-3">
-          <span className="bg-[var(--color-forest)] text-[var(--color-gold)] text-xs font-sans tracking-widest uppercase px-3 py-1">Step 1</span>
-          <p className="text-sm font-sans text-[var(--color-bark)]/60">Check which dates are open — white = available, grey = booked</p>
-        </div>
         <AvailabilityCalendar />
-
-        {/* Step 2 */}
-        <div className="flex items-center gap-4 mt-12 mb-3">
-          <span className="bg-[var(--color-gold)] text-white text-xs font-sans tracking-widest uppercase px-3 py-1">Step 2</span>
-          <p className="text-sm font-sans text-[var(--color-bark)]/60">Select your dates below and complete your booking</p>
-        </div>
-
-        {/* Hospitable booking checkout iframe */}
-        <div>
-          <iframe
-            id="booking-iframe"
-            sandbox="allow-top-navigation allow-scripts allow-same-origin"
-            style={{ width: "100%", height: "900px" }}
-            frameBorder={0}
-            src="https://booking.hospitable.com/widget/a1d62494-3545-4d00-a069-f863b24abc03/2190928"
-          />
-        </div>
 
         {/* Details */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm font-sans">
@@ -85,6 +40,7 @@ export default function BookPage() {
           $35/night per dog (max 2), $200 refundable deposit. Dogs must be 1yr+.
           25 acres of trails — a dog&apos;s paradise.
         </div>
+
       </div>
     </div>
   );

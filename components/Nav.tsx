@@ -4,9 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 
 const links = [
-  { href: "/the-property", label: "The Property" },
-  { href: "/the-nook",     label: "Nook & Flex Room" },
-  { href: "/contact",      label: "Contact" },
+  { href: "/the-property",  label: "The Property" },
+  { href: "/the-nook",      label: "Flex Room" },
+  { href: "/sauna",         label: "Treehouse Sauna" },
+  { href: "/contact",       label: "Contact" },
 ];
 
 export default function Nav() {
