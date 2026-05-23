@@ -43,10 +43,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           t.src=v;s=b.getElementsByTagName(e)[0];
           s.parentNode.insertBefore(t,s)}(window,document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1300116261700689');
+          fbq('init', '1640740380525421');
           fbq('track', 'PageView');
         `}</Script>
-        <noscript><img height="1" width="1" style={{display:"none"}} src="https://www.facebook.com/tr?id=1300116261700689&ev=PageView&noscript=1" alt="" /></noscript>
+        <noscript><img height="1" width="1" style={{display:"none"}} src="https://www.facebook.com/tr?id=1640740380525421&ev=PageView&noscript=1" alt="" /></noscript>
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-32WYJ50M9X" strategy="afterInteractive" />
         <Script id="ga4-init" strategy="afterInteractive">{`
           window.dataLayer = window.dataLayer || [];
