@@ -1,9 +1,12 @@
 import Link from "next/link";
+import SaunaHero from "./SaunaHero";
 
 const details = [
   "Custom cedar construction — built by hand on property",
   "Slate floors throughout",
   "Live-edge bench seating",
+  "Dual heating elements — floor radiant heat + traditional sauna heater",
+  "Control and preheat the sauna from inside the lodge",
   "Cold shower just outside the door",
   "Starlink wifi — even in the sauna",
   "Elevated treehouse position — forest views from inside",
@@ -26,23 +29,21 @@ export default function SaunaPage() {
         </p>
       </section>
 
-      {/* Photo placeholder */}
-      <section className="max-w-7xl mx-auto px-6 mb-16">
-        <div className="bg-[var(--color-forest)]/10 aspect-video flex items-center justify-center">
-          <div className="text-center font-sans text-sm text-[var(--color-bark)]/40">
-            <p className="text-lg mb-1">Photos &amp; video coming soon</p>
-            <p>Drop files into assets/treehouse-sauna/ and we&apos;ll get them placed</p>
-          </div>
-        </div>
-      </section>
+      {/* Video hero with rolling text */}
+      <SaunaHero />
 
       {/* Description */}
-      <section className="max-w-4xl mx-auto px-6 pb-16">
-        <p className="text-[var(--color-bark)]/80 text-lg leading-relaxed font-sans mb-10">
-          The treehouse sauna at Red Mountain Retreat was built entirely on property — custom cedar framing,
-          slate floors, and live-edge benches that took months to complete. It sits elevated among old-growth
-          trees on the edge of the forest, with a cold shower just outside. Sweat it out, step into the cold,
-          and listen to nothing but the mountain.
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <p className="text-[var(--color-bark)]/80 text-lg leading-relaxed font-sans mb-4">
+          It&apos;s a short walk from the lodge to the edge of the forest — but it feels like a
+          step into the wilderness. The treehouse sauna at Red Mountain Retreat was built
+          entirely on property — custom cedar framing, slate floors, and live-edge benches
+          that took months to complete.
+        </p>
+        <p className="text-[var(--color-bark)]/70 text-lg leading-relaxed font-sans mb-10">
+          It sits elevated among old-growth trees, with a cold shower just outside. Deer and
+          other wildlife frequently pass by — visible right from the elevated deck. Sweat it out,
+          step into the cold, and watch the mountain breathe.
         </p>
 
         {/* Feature list */}
