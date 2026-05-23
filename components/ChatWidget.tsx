@@ -1,5 +1,25 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, type ReactNode } from "react";
+
+/** Strip **markdown** and turn bare URLs into clickable links */
+function renderText(text: string): ReactNode {
+  const clean = text.replace(/\*\*(.*?)\*\*/g, "$1");
+  const urlRegex = /\b((?:https?:\/\/)?(?:[\w-]+\.)+(?:com|org|net|io|ca|us|gov|co)(?:\/[\w\-.~:/?#[\]@!$&'()*+,;=%]*)?)/gi;
+  const parts: ReactNode[] = [];
+  let last = 0;
+  let m: RegExpExecArray | null;
+  while ((m = urlRegex.exec(clean)) !== null) {
+    if (m.index > last) parts.push(clean.slice(last, m.index));
+    const href = m[0].startsWith("http") ? m[0] : `https://${m[0]}`;
+    parts.push(
+      <a key={m.index} href={href} target="_blank" rel="noopener noreferrer"
+        className="underline opacity-80 hover:opacity-100">{m[0]}</a>
+    );
+    last = urlRegex.lastIndex;
+  }
+  if (last < clean.length) parts.push(clean.slice(last));
+  return <>{parts}</>;
+}
 
 type Message = { role: "user" | "assistant"; content: string };
 
@@ -121,7 +141,7 @@ export default function ChatWidget() {
                   }`}
                 >
                   {msg.content ? (
-                    msg.content
+                    renderText(msg.content)
                   ) : (
                     /* Typing indicator while stream starts */
                     <span className="flex gap-1 items-center py-0.5">
