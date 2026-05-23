@@ -42,7 +42,7 @@ export default function TheNookPage() {
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">The Flex Room</p>
         <h1 className="font-display text-6xl text-[var(--color-forest)] font-light leading-tight mb-6">
-          Nook &amp; Flex Room
+          The Nook
         </h1>
         <p className="text-[var(--color-bark)]/70 text-xl leading-relaxed font-sans max-w-2xl mx-auto">
           840 sq ft of open space — the reason groups book Red Mountain Retreat
