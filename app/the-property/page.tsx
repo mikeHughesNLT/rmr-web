@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PropertyGallery from "@/components/PropertyGallery";
 
 const rooms = [
   { name: "Primary King Suite",  desc: "Ground floor. Wood-burning fireplace, seating area, vanity. Premium mattresses, luxury linens." },
@@ -17,18 +18,6 @@ const amenities = [
   "Cedar Hall — 840 sq ft activity space",
 ];
 
-const gallery = [
-  { src: "/images/great-room.jpg",    alt: "Great room — stone fireplace, log walls, full group gathering", wide: true },
-  { src: "/images/sauna-interior.jpg",alt: "Treehouse sauna interior — cedar, slate, live-edge benches" },
-  { src: "/images/house-front.jpg",   alt: "Lodge exterior — cedar siding, moss trees, green lawn" },
-  { src: "/images/bedroom-01.jpg",    alt: "King bedroom — barn door, hardwood floors, forest views" },
-  { src: "/images/kitchen.jpg",       alt: "Full kitchen — large group ready" },
-  { src: "/images/dining.jpg",        alt: "Dining area" },
-  { src: "/images/master-bath.jpg",   alt: "Master bathroom" },
-  { src: "/images/group-outside.jpg", alt: "Group on the grounds — 25 acres of outdoor space", wide: true },
-  { src: "/images/trails.jpg",        alt: "Private trails through old-growth forest" },
-  { src: "/images/exterior-02.jpg",   alt: "Property exterior" },
-];
 
 export default function ThePropertyPage() {
   return (
@@ -38,7 +27,7 @@ export default function ThePropertyPage() {
       <section className="max-w-4xl mx-auto px-6 py-16 text-center">
         <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">The Property</p>
         <h1 className="font-display text-6xl text-[var(--color-forest)] font-light leading-tight mb-6">
-          6,000 sq ft lodge + 840 sq ft Flex Room on 25 private acres
+          6,000 sq ft lodge + Cedar Hall on 25 private acres
         </h1>
         <p className="text-[var(--color-bark)]/70 text-lg leading-relaxed font-sans max-w-2xl mx-auto">
           Rich leathers, warm woods, deep greens, and cozy textures throughout.
@@ -48,22 +37,7 @@ export default function ThePropertyPage() {
 
       {/* Photo gallery grid */}
       <section className="max-w-7xl mx-auto px-6 mb-20">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {gallery.map((img, i) => (
-            <div
-              key={img.src}
-              className={`relative overflow-hidden ${img.wide ? "col-span-2" : ""} ${i === 0 ? "aspect-[16/9]" : "aspect-square"}`}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </div>
-          ))}
-        </div>
+        <PropertyGallery />
       </section>
 
       {/* Bedrooms */}
