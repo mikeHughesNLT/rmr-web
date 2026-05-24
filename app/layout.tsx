@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     title: "Red Mountain Retreat",
     description: "25 acres. Treehouse sauna. Steinway piano. Sleeps 14.",
     type: "website",
+    images: [{ url: "/images/exterior-02.jpg", width: 1920, height: 1137 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/images/exterior-02.jpg"],
   },
 };
 
