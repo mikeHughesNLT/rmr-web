@@ -14,7 +14,7 @@ const amenities = [
   "Private hiking trails (25 acres)", "Expansive lawn + fire pit", "Multiple decks + seating nooks",
   "Washer + dryer", "Starlink wifi (lodge + sauna)", "Smart lock — no key exchange",
   "Free parking (6+ vehicles)", "Firewood included", "Dog kennels available",
-  "Nook & Flex Room — 840 sq ft activity space",
+  "Cedar Hall — 840 sq ft activity space",
 ];
 
 const gallery = [
@@ -109,15 +109,15 @@ export default function ThePropertyPage() {
         </div>
       </section>
 
-      {/* Nook & Flex Room CTA */}
+      {/* Cedar Hall CTA */}
       <section className="bg-[var(--color-cream-dark)] py-16 px-6 text-center">
-        <h2 className="font-display text-4xl text-[var(--color-forest)] mb-4">Plus: The Nook &amp; Flex Room</h2>
+        <h2 className="font-display text-4xl text-[var(--color-forest)] mb-4">Plus: Cedar Hall</h2>
         <p className="text-[var(--color-bark)]/70 font-sans mb-6 max-w-xl mx-auto">
-          840 sq ft of open space — conferences, kids, retreats, and more. Wrestling mats coming Summer 2026.
+          840 sq ft of open space — conferences, kids, retreats, movie nights, and more. Wrestling mats coming Summer 2026.
         </p>
-        <Link href="/the-nook"
+        <Link href="/cedar-hall"
           className="border-2 border-[var(--color-forest)] text-[var(--color-forest)] px-8 py-3 text-sm tracking-widest uppercase hover:bg-[var(--color-forest)] hover:text-white transition-colors font-sans inline-block">
-          Explore the Nook &amp; Flex Room
+          Explore Cedar Hall
         </Link>
       </section>
     </div>

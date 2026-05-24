@@ -73,7 +73,7 @@ export default function SaunaPage() {
           </h2>
           <p className="text-[var(--color-bark)]/70 font-sans max-w-xl mx-auto leading-relaxed">
             The{" "}
-            <Link href="/the-nook" className="text-[var(--color-gold)] hover:underline">Flex Room</Link>
+            <Link href="/cedar-hall" className="text-[var(--color-gold)] hover:underline">Cedar Hall</Link>
             {" "}and the treehouse sauna are 200 feet apart.
             Work in one, reset in the other. There&apos;s nothing else like it at a rental property in the Mt. Baker area.
           </p>

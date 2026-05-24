@@ -47,7 +47,7 @@ Oversized sectional, smart TV, separate from the Great Room — kids can run a m
 **Full Kitchen**
 Fully equipped for large group cooking. Counter space and seating for the kind of meals that become stories.
 
-**The Flex Room (The Nook)**
+**Cedar Hall & Cedar Nook**
 840 sq ft former garage completely opened into a flex space. Three large rollup doors open to the outdoors. 120" drop-down projection screen. In-wall ceiling speakers. Climate controlled with heat. Rustic log perimeter wall.
 
 Summer 2026 additions: wrestling mats + inflatable furniture. The projector setup makes it a killer movie night space — bring popcorn, make a mess, build memories.
@@ -71,7 +71,7 @@ The signature feature. A custom-built sauna perched in the trees above the fores
 - Short walk from the lodge — feels like a step into the wilderness
 - Towels and robes provided
 
-The Treehouse Sauna and the Flex Room are 200 feet apart. Train in one, recover in the other.
+The Treehouse Sauna and the Cedar Hall are 200 feet apart. Train in one, recover in the other.
 
 ---
 
@@ -208,7 +208,7 @@ Other wildlife on property: ants, bats, mice, raccoons, bobcats (we share the la
 
 ## WEDDINGS & SPECIAL EVENTS
 
-Yes, Red Mountain Retreat hosts weddings. It's a stunning venue — expansive lawn, stone fireplace great room, Steinway piano, forest backdrop, and the Flex Room as event space.
+Yes, Red Mountain Retreat hosts weddings. It's a stunning venue — expansive lawn, stone fireplace great room, Steinway piano, forest backdrop, and the Cedar Hall as event space.
 
 **Small weddings:** Book normally. The property handles intimate ceremonies beautifully.
 
@@ -237,16 +237,16 @@ Yes, Red Mountain Retreat hosts weddings. It's a stunning venue — expansive la
 Four kings, two queens, twin room. Two separate living areas. Ground-floor suite for grandparents. 25 acres keeps kids moving. Three generations under one roof without friction.
 
 **Corporate Retreats & Offsites**
-7 bedrooms, Starlink, dedicated workspace, Flex Room for sessions. Treehouse sauna between meetings. Fireplace after dinner. Where teams solve what they couldn't in a conference room.
+7 bedrooms, Starlink, dedicated workspace, Cedar Hall for sessions. Treehouse sauna between meetings. Fireplace after dinner. Where teams solve what they couldn't in a conference room.
 
 **Wellness Retreats**
-25 acres of forest, treehouse sauna, private trails, silence. The Flex Room handles movement practice. The sauna handles recovery. The forest handles everything else.
+25 acres of forest, treehouse sauna, private trails, silence. The Cedar Hall handles movement practice. The sauna handles recovery. The forest handles everything else.
 
 **Intimate Celebrations**
-Weddings, milestone birthdays, reunions. Expansive lawn, multiple decks, stone fireplace great room, Steinway piano, forest backdrop. The Flex Room as event space. Reach out before booking for special events — Mike loves the creative ones.
+Weddings, milestone birthdays, reunions. Expansive lawn, multiple decks, stone fireplace great room, Steinway piano, forest backdrop. The Cedar Hall as event space. Reach out before booking for special events — Mike loves the creative ones.
 
 **Sports & Training Camps**
-Wrestling mats arriving Summer 2026. Flex Room for drills and training. Treehouse sauna for recovery. Nothing else like it in the Mt. Baker area.
+Wrestling mats arriving Summer 2026. Cedar Hall for drills and training. Treehouse sauna for recovery. Nothing else like it in the Mt. Baker area.
 
 ---
 
