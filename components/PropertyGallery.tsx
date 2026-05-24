@@ -12,16 +12,17 @@ type GalleryItem = {
 };
 
 const gallery: GalleryItem[] = [
-  { src: "/images/great-room.jpg",    alt: "Great room — stone fireplace, log walls, full group gathering", wide: true },
-  { src: "/images/sauna-interior.jpg",alt: "Treehouse sauna — cedar walls, slate floors, live-edge benches", link: "/sauna" },
-  { src: "/images/house-front.jpg",   alt: "Lodge exterior — cedar siding, moss trees, green lawn" },
-  { src: "/images/bedroom-01.jpg",    alt: "King bedroom — barn door, hardwood floors, forest views" },
-  { src: "/images/kitchen.jpg",       alt: "Full kitchen — large group ready" },
-  { src: "/images/dining.jpg",        alt: "Dining area" },
-  { src: "/images/master-bath.jpg",   alt: "Master bathroom" },
-  { src: "/images/group-outside.jpg", alt: "Group on the grounds — 25 acres of outdoor space", wide: true },
-  { src: "/images/trails.jpg",        alt: "Private trails through old-growth forest" },
-  { src: "/images/exterior-02.jpg",   alt: "Red Mountain Retreat — sign, deer, forest path", wide: true },
+  { src: "/images/exterior-bridge.jpg",  alt: "Lodge at golden hour — stone patio, bridge, cedar exterior", wide: true },
+  { src: "/images/great-room-2.jpg",     alt: "Great room — log walls, cathedral ceiling, stone fireplace", wide: true },
+  { src: "/images/sauna-interior-2.jpg", alt: "Treehouse sauna — cedar walls, slate floors, live-edge benches, glowing rocks", link: "/sauna" },
+  { src: "/images/great-room.jpg",       alt: "Great room — full group gathering by the fire" },
+  { src: "/images/bedroom-01.jpg",       alt: "King bedroom — barn door, hardwood floors, forest views" },
+  { src: "/images/kitchen.jpg",          alt: "Full kitchen — large group ready" },
+  { src: "/images/dining.jpg",           alt: "Dining area" },
+  { src: "/images/master-bath.jpg",      alt: "Master bathroom" },
+  { src: "/images/group-outside.jpg",    alt: "Group on the grounds — 25 acres of outdoor space", wide: true },
+  { src: "/images/trails.jpg",           alt: "Private trails through old-growth forest" },
+  { src: "/images/exterior-02.jpg",      alt: "Red Mountain Retreat — sign, deer, forest path", wide: true },
 ];
 
 // Only non-linked items open in lightbox
