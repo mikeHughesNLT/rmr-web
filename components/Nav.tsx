@@ -11,6 +11,7 @@ const links: NavLink[] = [
     label: "The Property",
     sub: [
       { href: "/the-property", label: "Overview" },
+      { href: "/rooms",        label: "All 7 Bedrooms" },
       { href: "/sauna",        label: "Treehouse Sauna" },
       { href: "/cedar-hall",   label: "Cedar Hall" },
       { href: "/location",     label: "Location & Area" },
