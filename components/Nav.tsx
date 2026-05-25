@@ -15,10 +15,12 @@ const links: NavLink[] = [
       { href: "/sauna",        label: "Treehouse Sauna" },
       { href: "/cedar-hall",   label: "Cedar Hall" },
       { href: "/location",     label: "Location & Area" },
+      { href: "/our-story",    label: "Our Story" },
     ],
   },
+  { href: "/cedar-hall",    label: "Cedar Hall" },
+  { href: "/sauna",         label: "Treehouse Sauna" },
   { href: "/things-to-do",  label: "Things To Do" },
-  { href: "/our-story",     label: "Our Story" },
   { href: "/contact",       label: "Contact" },
 ];
 

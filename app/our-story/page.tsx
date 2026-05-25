@@ -223,11 +223,13 @@ export default function OurStoryPage() {
               </p>
             </div>
           </div>
-          <div className="relative aspect-[4/3] bg-[var(--color-bark)]/40 flex items-center justify-center">
-            {/* TODO: replace with church-mountain-vows.jpg once available */}
-            <p className="text-[var(--color-cream)]/20 font-sans text-xs text-center px-8">
-              Church Mountain vow renewal photo coming soon
-            </p>
+          <div className="grid grid-cols-2 gap-3">
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image src="/images/church-mountain-01.jpg" alt="Mike and Angie at Church Mountain summit" fill className="object-cover" />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image src="/images/church-mountain-03.jpg" alt="Church Mountain vow renewal" fill className="object-cover" />
+            </div>
           </div>
         </div>
       </section>
@@ -277,6 +279,14 @@ export default function OurStoryPage() {
             Red Mountain Retreat is not just a rental. It is a place to come back together.
           </p>
         </div>
+      </section>
+
+      {/* Church Mountain video — full bleed */}
+      <section className="relative h-[50vh] md:h-[60vh] overflow-hidden">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+          <source src="/videos/church-mountain.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[var(--color-forest)]/20" />
       </section>
 
       {/* CTA */}

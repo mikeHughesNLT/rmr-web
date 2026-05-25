@@ -198,11 +198,8 @@ export default function ThingsToDoPage() {
                 step. It seemed like the right place to recommit: hard-won, beautiful, and worth it.
               </p>
             </div>
-            <div className="relative aspect-[4/3] bg-[var(--color-bark)]/30 flex items-center justify-center">
-              {/* TODO: replace with church-mountain-vows.jpg once available */}
-              <p className="text-[var(--color-cream)]/30 font-sans text-xs text-center px-4">
-                Church Mountain photo coming soon
-              </p>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image src="/images/church-mountain-01.jpg" alt="Mike and Angie at the Church Mountain summit" fill className="object-cover" />
             </div>
           </div>
 
