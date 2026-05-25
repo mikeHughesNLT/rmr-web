@@ -57,8 +57,15 @@ export default function ContactPage() {
 
         <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">Get in Touch</p>
         <h1 className="font-display text-5xl text-[var(--color-forest)] font-light mb-4">Contact Us</h1>
-        <p className="text-[var(--color-bark)]/70 font-sans mb-12 text-lg">
+        <p className="text-[var(--color-bark)]/70 font-sans mb-6 text-lg">
           Planning a retreat, celebration, or group stay? We love the creative ones — reach out and let&apos;s talk.
+        </p>
+        <p className="text-[var(--color-bark)]/50 font-sans text-sm mb-12">
+          Or email directly:{" "}
+          <a href="mailto:mike@stayredmountain.com"
+            className="text-[var(--color-gold)] hover:text-[var(--color-gold-light)] transition-colors">
+            mike@stayredmountain.com
+          </a>
         </p>
 
         {/* ── Success state ── */}
@@ -112,7 +119,7 @@ export default function ContactPage() {
         {phase === "error" && (
           <div className="bg-red-50 border border-red-200 p-6 mb-6 text-sm font-sans text-red-700">
             Something went wrong sending your message. Please email us directly at{" "}
-            <a href="mailto:runliftrun@gmail.com" className="underline">runliftrun@gmail.com</a>.
+            <a href="mailto:mike@stayredmountain.com" className="underline">mike@stayredmountain.com</a>.
           </div>
         )}
 
