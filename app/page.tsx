@@ -5,7 +5,7 @@ import HeroVideo from "@/components/HeroVideo";
 const stats = [
   { value: "7",   label: "Bedrooms" },
   { value: "14",  label: "Guests" },
-  { value: "20",  label: "Acres" },
+  { value: "25",  label: "Acres" },
   { value: "3.5", label: "Baths" },
 ];
 
@@ -67,7 +67,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map(s => (
             <div key={s.label}>
-              <p className="font-display text-4xl text-[var(--color-gold)]">{s.value}</p>
+              <p className="font-display text-4xl text-[var(--color-gold)]">
+                {s.value.includes(".")
+                  ? <>{s.value.split(".")[0]}<span className="relative top-[0.12em]">.</span>{s.value.split(".")[1]}</>
+                  : s.value}
+              </p>
               <p className="text-sm tracking-widest uppercase mt-1 font-sans opacity-70">{s.label}</p>
             </div>
           ))}
