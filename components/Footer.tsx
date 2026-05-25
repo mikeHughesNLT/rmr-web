@@ -46,9 +46,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 max-w-7xl mx-auto px-6 py-4 text-xs flex justify-between">
+      <div className="border-t border-white/10 max-w-7xl mx-auto px-6 py-4 text-xs flex flex-wrap justify-between gap-2">
         <span>© {new Date().getFullYear()} Red Mountain Retreat. All rights reserved.</span>
-        <span>Maple Falls, WA · Mt. Baker Country</span>
+        <div className="flex gap-4">
+          <Link href="/terms" className="hover:text-[var(--color-cream)] transition-colors">Terms</Link>
+          <Link href="/privacy" className="hover:text-[var(--color-cream)] transition-colors">Privacy</Link>
+          <span>Maple Falls, WA · Mt. Baker Country</span>
+        </div>
       </div>
     </footer>
   );
