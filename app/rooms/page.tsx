@@ -277,7 +277,7 @@ export default function RoomsPage() {
         <p className="text-[var(--color-cream)]/70 font-sans text-sm mb-8">
           The whole property is yours. No shared spaces with strangers.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
           <Link href="/book"
             className="bg-[var(--color-gold)] text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-[var(--color-gold-light)] transition-colors font-sans">
             Check Availability
@@ -287,6 +287,18 @@ export default function RoomsPage() {
             Back to Overview
           </Link>
         </div>
+        <details className="max-w-md mx-auto text-left group">
+          <summary className="text-[var(--color-cream)]/40 font-sans text-xs tracking-widest uppercase cursor-pointer hover:text-[var(--color-gold)] transition-colors list-none text-center">
+            Not using all 7 bedrooms? ↓
+          </summary>
+          <div className="mt-4 bg-white/5 border border-white/10 px-6 py-5 text-[var(--color-cream)]/60 font-sans text-xs leading-relaxed">
+            If your group doesn&apos;t need every room, book direct and let us know. We can lock the unused bedrooms
+            and reduce the cleaning fee accordingly — potentially saving you around $100. Locked rooms are cleaned
+            and secured; no guests ever access them, only our cleaning service. It&apos;s a simple coordination we&apos;re
+            happy to do for direct bookings. Just mention it at the time of booking or reach out via the{" "}
+            <Link href="/contact" className="text-[var(--color-gold)] hover:underline">contact page</Link>.
+          </div>
+        </details>
       </section>
     </div>
   );

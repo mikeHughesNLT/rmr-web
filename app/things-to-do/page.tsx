@@ -157,17 +157,31 @@ export default function ThingsToDoPage() {
       </section>
 
       {/* Nooksack Falls */}
-      <section className="max-w-4xl mx-auto px-6 py-16 text-center">
-        <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">Quick Stop · High Reward</p>
-        <h2 className="font-display text-4xl text-[var(--color-forest)] font-light mb-4">Nooksack Falls</h2>
-        <p className="text-[var(--color-bark)]/70 font-sans leading-relaxed max-w-2xl mx-auto">
-          A short detour off Mt. Baker Highway leads to a forest road, a short walk, and a fenced rocky outcropping
-          above one of the most beautiful waterfalls in the Cascades. Guests consistently rate it as one of the easiest
-          big-payoff stops in the region. Add it to any drive toward Glacier or Heather Meadows.
-        </p>
-        <p className="text-[var(--color-bark)]/40 font-sans text-xs mt-4">
-          Stay behind the fencing — the canyon edge is the reason it is there.
-        </p>
+      <section className="grid grid-cols-1 md:grid-cols-2">
+        <div className="flex items-center p-12 md:p-16 bg-[var(--color-cream)]">
+          <div>
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">Quick Stop · High Reward</p>
+            <h2 className="font-display text-4xl text-[var(--color-forest)] font-light mb-4">Nooksack Falls</h2>
+            <p className="text-[var(--color-bark)]/70 font-sans text-sm leading-relaxed mb-4">
+              A short detour off Mt. Baker Highway leads to a forest road, a short walk, and a fenced rocky outcropping
+              above one of the most beautiful waterfalls in the Cascades. Easily one of the best big-payoff stops in the
+              region. Add it to any drive toward Glacier or Heather Meadows.
+            </p>
+            <p className="text-[var(--color-bark)]/40 font-sans text-xs">
+              Stay behind the fencing — the canyon edge is the reason it is there.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-rows-2">
+          <div className="relative aspect-video overflow-hidden">
+            <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+              <source src="/videos/nooksack-falls.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div className="relative aspect-video overflow-hidden">
+            <Image src="/images/nooksack-falls.jpg" alt="Mike and Angie at Nooksack Falls" fill className="object-cover object-top" />
+          </div>
+        </div>
       </section>
 
       {/* Hikes */}
