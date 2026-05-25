@@ -12,11 +12,12 @@ export default function Footer() {
         <div>
           <p className="text-xs tracking-widest uppercase mb-4 text-[var(--color-gold)]">Explore</p>
           <nav className="flex flex-col gap-2 text-sm">
-            <Link href="/the-property" className="hover:text-[var(--color-cream)] transition-colors">The Property</Link>
-            <Link href="/rooms"        className="hover:text-[var(--color-cream)] transition-colors">All 7 Bedrooms</Link>
-            <Link href="/cedar-hall"   className="hover:text-[var(--color-cream)] transition-colors">Cedar Hall</Link>
-            <Link href="/location"     className="hover:text-[var(--color-cream)] transition-colors">Location</Link>
-            <Link href="/contact"      className="hover:text-[var(--color-cream)] transition-colors">Contact</Link>
+            <Link href="/the-property"  className="hover:text-[var(--color-cream)] transition-colors">The Property</Link>
+            <Link href="/rooms"         className="hover:text-[var(--color-cream)] transition-colors">All 7 Bedrooms</Link>
+            <Link href="/cedar-hall"    className="hover:text-[var(--color-cream)] transition-colors">Cedar Hall</Link>
+            <Link href="/things-to-do"  className="hover:text-[var(--color-cream)] transition-colors">Things To Do</Link>
+            <Link href="/our-story"     className="hover:text-[var(--color-cream)] transition-colors">Our Story</Link>
+            <Link href="/contact"       className="hover:text-[var(--color-cream)] transition-colors">Contact</Link>
           </nav>
         </div>
         <div>
