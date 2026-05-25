@@ -233,16 +233,26 @@ export default function ThingsToDoPage() {
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="bg-[var(--color-bark)] flex items-center p-12 md:p-16">
           <div>
-            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">After the Hike</p>
-            <h2 className="font-display text-4xl text-white font-light leading-tight mb-4">
-              North Fork Brewery
-            </h2>
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-6 font-sans">After the Hike</p>
+            <div className="mb-6">
+              <Image
+                src="/images/north-fork-brewery-logo.jpg"
+                alt="The North Fork Brewery — Pizzeria & Beer Shrine"
+                width={140}
+                height={210}
+                className="rounded"
+              />
+            </div>
             <p className="text-[var(--color-cream)]/70 font-sans text-sm leading-relaxed mb-4">
               North Fork Brewery in Deming is the classic Mt. Baker Highway stop: craft beer, legendary pizza, and the
               kind of local character that cannot be manufactured. It is the right place to end a day on the mountain —
               still in the foothills, still among the trees, with a pint and the feeling of a day well spent.
             </p>
-            <p className="text-[var(--color-cream)]/40 font-sans text-xs">
+            <a href="https://www.northforkbrewery.com/" target="_blank" rel="noopener noreferrer"
+              className="text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase hover:text-[var(--color-gold-light)] transition-colors">
+              northforkbrewery.com →
+            </a>
+            <p className="text-[var(--color-cream)]/40 font-sans text-xs mt-2">
               6186 Mt. Baker Hwy, Deming · Open daily from noon
             </p>
           </div>
