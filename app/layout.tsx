@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     images: ["/images/exterior-02.jpg"],
   },
+  other: {
+    "p:domain_verify": "dc389a56cd386a456ad4cded7c92dbf3",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
