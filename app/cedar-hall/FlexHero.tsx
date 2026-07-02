@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react";
 
 const SLIDES = [
-  "840 sq ft of open floor — doors rolled up to the mountain air.",
-  "120\" drop screen. In-wall speakers. Your private cinema.",
+  "36′ × 26′ of wide-open floor — doors rolled up to the mountain air.",
+  "Inflatable screen. Inflatable furniture. Movie night in the forest.",
   "Three large rollup doors open the whole room to the forest.",
-  "Wrestling mats arriving Summer 2026 — the only facility like it in the area.",
-  "Morning practice. Breathwork. Team meeting. Movie night. All in one space.",
+  "Mats arriving July 2026 — yoga, combatives, or a full-on dodgeball war.",
+  "Morning practice. Team meeting. Movie night. Dodgeball. All in one space.",
 ];
 
 const FADE_MS  = 1000;
@@ -33,7 +33,7 @@ export default function FlexHero() {
   return (
     <section className="relative w-full aspect-video max-h-[80vh] overflow-hidden bg-black">
       <video
-        src="/videos/flexroom.mp4"
+        src="/videos/cedar-hall.mp4"
         autoPlay
         muted
         loop

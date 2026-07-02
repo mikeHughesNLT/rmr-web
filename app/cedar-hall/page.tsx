@@ -15,12 +15,12 @@ const useCases = [
   {
     icon: "🤸",
     title: "Movement & Fitness",
-    desc: "Open floor, high ceiling, room to move. Yoga, stretching, CrossFit-style circuits, combatives, dance, martial arts. Wrestling mats arriving late Summer 2026.",
+    desc: "Open floor, high ceiling, room to move. Yoga, stretching, combatives, dance, martial arts — or, quite frankly, an all-out dodgeball war. Mats arriving July 2026 (and yes, the foam gear is on order).",
   },
   {
     icon: "🎬",
     title: "Movie Nights",
-    desc: "Drop down the 120\" projection screen. Pull out the inflatable furniture. Crank the in-wall ceiling speakers. With heat running and rollup doors cracked to the forest — there's nothing like it.",
+    desc: "Blow up the inflatable screen, pull out the inflatable furniture, crank the in-wall ceiling speakers. Spill the popcorn everywhere? No problem — we open the garage doors and blow it out with the leaf blowers.",
   },
   {
     icon: "🧘",
@@ -30,7 +30,7 @@ const useCases = [
   {
     icon: "🏋️",
     title: "Sports & Training Camps",
-    desc: "Wrestling mats arriving late Summer 2026. Coach a team, run drills, train together — then recover in the treehouse sauna. The only facility like this at a retreat property in the Mt. Baker area.",
+    desc: "Mats arriving July 2026. Coach a team, run drills, train together — then recover in the treehouse sauna. The only facility like this at a retreat property in the Mt. Baker area.",
   },
 ];
 
@@ -66,19 +66,19 @@ export default function CedarHallPage() {
               <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Rollup Doors</p>
             </div>
             <div>
-              <p className="font-display text-4xl text-[var(--color-gold)]">120″</p>
-              <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Drop Screen</p>
+              <p className="font-display text-4xl text-[var(--color-gold)]">36×26</p>
+              <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Open Floor</p>
             </div>
             <div>
-              <p className="font-display text-3xl text-[var(--color-gold)]">Summer</p>
+              <p className="font-display text-3xl text-[var(--color-gold)]">July</p>
               <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Mats &apos;26</p>
             </div>
           </div>
         </div>
 
         <p className="text-[var(--color-bark)]/80 text-lg leading-relaxed font-sans mb-6">
-          Cedar Hall is a former 840 sq ft garage — completely cleared and opened into an activity
-          space unlike anything you&apos;ll find in a vacation rental. High ceiling, clean floor, natural light,
+          Cedar Hall is a former 840 sq ft garage — completely cleared into roughly 36′ × 26′ of wide-open floor
+          for whatever your group can dream up. High ceiling, clean floor, natural light,
           and a rustic log perimeter wall that keeps the mountain atmosphere alive.
           It&apos;s the space that makes Red Mountain Retreat work for groups who need to actually <em>do</em> something,
           not just sit around.
@@ -88,12 +88,12 @@ export default function CedarHallPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
           {[
             "Three large panel rollup doors — open to the outdoors",
-            "120\" drop-down projection screen",
+            "36′ × 26′ wide-open floor for any activity",
+            "Inflatable projection screen for movie night",
             "In-wall ceiling speakers throughout",
             "Climate controlled with heat",
-            "Inflatable furniture available for movies & lounging",
+            "Inflatable furniture for movies & lounging",
             "Rustic log perimeter wall",
-            "Open floor plan — no fixed obstacles",
             "High ceiling for movement and sports",
           ].map(f => (
             <div key={f} className="flex items-start gap-3 py-2 border-b border-[var(--color-cream-dark)]">
@@ -114,9 +114,9 @@ export default function CedarHallPage() {
         </div>
 
         <p className="text-[var(--color-bark)]/70 text-base leading-relaxed font-sans">
-          Wrestling mats are arriving <strong>late Summer 2026</strong> — making Cedar Hall the only retreat property
-          in the Mt. Baker area with a dedicated wrestling and grappling space. Coaches, wrestling camps,
-          BJJ squads: this is your facility.
+          Mats are arriving <strong>July 2026</strong> — making Cedar Hall the only retreat property
+          in the Mt. Baker area with a dedicated space for wrestling, grappling, yoga, and combatives.
+          Coaches, wrestling camps, BJJ squads: this is your facility.
         </p>
       </section>
 
