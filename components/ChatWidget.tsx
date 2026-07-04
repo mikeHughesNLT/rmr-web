@@ -99,7 +99,7 @@ export default function ChatWidget() {
       {/* ── Chat panel ── */}
       {open && (
         <div
-          className="fixed bottom-24 right-4 sm:right-6 z-50 w-[90vw] max-w-[380px] shadow-2xl flex flex-col"
+          className="print:hidden fixed bottom-24 right-4 sm:right-6 z-50 w-[90vw] max-w-[380px] shadow-2xl flex flex-col"
           style={{ maxHeight: "520px" }}
         >
           {/* Header */}
@@ -209,7 +209,7 @@ export default function ChatWidget() {
       {/* ── Toggle button ── */}
       <button
         onClick={() => setOpen(o => !o)}
-        className="fixed bottom-6 right-4 sm:right-6 z-50 w-14 h-14 rounded-full bg-[var(--color-gold)] text-white shadow-lg hover:bg-[var(--color-gold-light)] transition-colors flex items-center justify-center"
+        className="print:hidden fixed bottom-6 right-4 sm:right-6 z-50 w-14 h-14 rounded-full bg-[var(--color-gold)] text-white shadow-lg hover:bg-[var(--color-gold-light)] transition-colors flex items-center justify-center"
         aria-label={open ? "Close chat" : "Ask about the property"}
       >
         {open ? (

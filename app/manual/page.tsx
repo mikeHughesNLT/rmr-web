@@ -80,6 +80,7 @@ export default function ManualPage() {
             body { background: white !important; }
 
             .cover-page {
+              height: 11in;
               min-height: 11in;
               page-break-after: always;
               break-after: page;
@@ -113,7 +114,7 @@ export default function ManualPage() {
         {/* ══════════════════════════════════════════════════════════════
             PAGE 1 — COVER  (full bleed)
         ══════════════════════════════════════════════════════════════ */}
-        <section className="cover-page relative flex items-center justify-center overflow-hidden h-[92vh] print:h-auto">
+        <section className="cover-page relative flex items-center justify-center overflow-hidden h-screen">
           <Image
             src="/images/exterior-02.jpg"
             alt="Red Mountain Retreat"
@@ -154,6 +155,28 @@ export default function ManualPage() {
 
           {/* Bottom fade */}
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[var(--color-forest)]/60 to-transparent" />
+
+          {/* Print-only QR strip — hidden on web, visible when printing */}
+          <div className="hidden print:flex absolute bottom-0 left-0 right-0 items-center justify-center gap-6 px-10 pb-8 z-20">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={QR_URL}
+              alt="QR code — stayredmountain.com/manual"
+              width={90}
+              height={90}
+            />
+            <div className="text-left">
+              <p className="font-sans text-[9px] tracking-[0.35em] uppercase text-[var(--color-gold)] mb-1">
+                View the Digital Manual
+              </p>
+              <p className="font-sans text-sm text-white font-medium">
+                stayredmountain.com/manual
+              </p>
+              <p className="font-sans text-xs text-white/60 mt-1">
+                Password: <span className="text-white/90 font-medium">guest</span>
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* ══════════════════════════════════════════════════════════════
