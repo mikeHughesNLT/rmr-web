@@ -379,52 +379,81 @@ export default function ManualPage() {
         </section>
 
         {/* ══════════════════════════════════════════════════════════════
-            PAGE 6 — OUTDOORS
+            PAGE 6 — OUTDOORS + TRAIL MAP
         ══════════════════════════════════════════════════════════════ */}
         <section className="print-page max-w-5xl mx-auto px-6 py-16 print:max-w-none print:py-8 print:px-0">
-          <div className="grid md:grid-cols-2 gap-12 print:gap-8">
+          <div className="grid md:grid-cols-2 gap-10 print:gap-8">
+
+            {/* Left — descriptions */}
             <div>
               <SectionLabel>The Property</SectionLabel>
-              <h3 className="font-display text-4xl text-[var(--color-forest)] font-light mb-6 leading-snug">
+              <h3 className="font-display text-4xl text-[var(--color-forest)] font-light mb-5 leading-snug">
                 Outdoors &<br />On the Land
               </h3>
 
               <Space
-                name="Trails — 25+ Private Acres"
-                desc="The property trails wind from the lodge grounds up through old-growth forest on Red Mountain. This is real hiking — not a manicured path. The owners control approximately 91 acres total: the 25-acre main property plus 20 adjacent acres and 46 acres on Red Mountain itself. Bring good shoes. You will find your own route."
-              />
-              <Space
-                name="The Gold Mine"
-                desc="There is a historic early-1900s gold mine on the property. The entrance is Indiana Jones-level impressive — solid rock all the way in, about 40 feet into the hillside, with a natural freshwater spring inside. The owner's uncle claims to have found gold in it. Unverified. You'll want to check it out on the trails."
-              />
-              <Space
                 name="Fire Pit"
-                desc="Firewood is provided and stocked — the owner brings down more than enough from the land each winter. You will not run low. Light it at dark, pull up the Adirondack chairs, and take your time. Never leave the fire unattended."
+                desc="Firewood is provided and stocked — the owners bring down more than enough from the land each winter. You will never run low. Light it at dark, pull up the Adirondack chairs, and take your time. Never leave the fire unattended."
               />
-            </div>
-
-            <div>
               <Space
                 name="The Lawn"
-                desc="Expansive lawn for games, outdoor dining, gatherings. Corn hole, badminton, or just room to spread out. For larger events and dry-season gatherings, additional parking opens on the lawn as well."
-              />
-              <Space
-                name="Mountain Biking & Exploring"
-                desc="Bring bikes. The private property trails are great for all levels — from the kids wanting to explore to riders looking for range. The adjacent 20 acres and Red Mountain access give real terrain."
+                desc="Expansive lawn for games, outdoor dining, and gatherings. Corn hole, badminton, or just room to spread out. Additional parking opens on the lawn for larger groups in dry season."
               />
               <Space
                 name="Wildlife"
-                desc="Deer are plentiful and a genuine treat — they blend into the forest and frequently pass beneath the sauna deck. Black bears are in the area but have never been a nuisance. Keep food and garbage secured. Bobcats, raccoons, bats, and eagles are also regulars. No hunting on the property."
+                desc="Deer pass beneath the sauna deck regularly — a genuine highlight. Black bears are in the area but have never been a nuisance; secure all food and garbage. Bobcats, raccoons, bats, and eagles are regulars. No hunting on the property."
               />
 
-              <div className="mt-6 relative h-36 print:h-28 overflow-hidden">
+              {/* Cave photo */}
+              <div className="mt-4 relative h-32 overflow-hidden">
                 <Image
-                  src="/images/trails.jpg"
-                  alt="Property trails"
+                  src="/images/cave.jpg"
+                  alt="The Gold Mine cave entrance"
                   fill
                   className="object-cover object-center rounded-sm print:rounded-none"
                 />
-                <div className="absolute inset-0 bg-[var(--color-forest)]/20" />
+                <div className="absolute inset-0 bg-[var(--color-forest)]/25" />
+                <p className="absolute bottom-2 left-3 font-sans text-[10px] tracking-widest uppercase text-white/80">
+                  The Gold Mine
+                </p>
+              </div>
+            </div>
+
+            {/* Right — trail map */}
+            <div>
+              <h4 className="font-display text-xl text-[var(--color-forest)] mb-3">Trail Map</h4>
+
+              {/* Map image */}
+              <div className="relative w-full aspect-square max-h-64 print:max-h-72 overflow-hidden mb-4">
+                <Image
+                  src="/images/trails.jpg"
+                  alt="Property trail map"
+                  fill
+                  className="object-cover object-top rounded-sm print:rounded-none"
+                />
+              </div>
+
+              {/* Trail legend */}
+              <div className="space-y-2 mb-5">
+                {[
+                  { color: 'bg-green-600',  label: 'Green Trail', desc: 'Up the hill to old-growth forest. Starts on the property, continues onto state land. The big trees are up here — worth the climb.' },
+                  { color: 'bg-blue-500',   label: 'Blue Trail',  desc: 'A pleasant loop trail that circles the property. Easier grade — good for a quick explore or with kids.' },
+                  { color: 'bg-yellow-500', label: 'Yellow Trail', desc: 'Leads to the Gold Mine cave. Historic 1900s entrance, solid rock, natural freshwater spring inside. Follow yellow to find it.' },
+                ].map(({ color, label, desc }) => (
+                  <div key={label} className="flex items-start gap-2">
+                    <div className={`w-3 h-3 rounded-full ${color} shrink-0 mt-1`} />
+                    <div>
+                      <span className="font-sans text-xs font-semibold text-[var(--color-forest)]">{label} — </span>
+                      <span className="font-sans text-xs text-[var(--color-bark)]/70">{desc}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-[var(--color-forest)]/8 border-l-2 border-[var(--color-gold)] pl-3 py-2">
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
+                  <strong>Wear good shoes.</strong> Green trail is real hiking — not a manicured path. The property connects to approximately 91 acres total. Bring water and a sense of adventure.
+                </p>
               </div>
             </div>
           </div>
@@ -435,15 +464,18 @@ export default function ManualPage() {
         ══════════════════════════════════════════════════════════════ */}
         <section className="print-page max-w-5xl mx-auto px-6 py-16 print:max-w-none print:py-8 print:px-0">
           <SectionLabel>Explore the Area</SectionLabel>
-          <h3 className="font-display text-4xl text-[var(--color-forest)] font-light mb-8 leading-snug">
+          <h3 className="font-display text-4xl text-[var(--color-forest)] font-light mb-6 leading-snug">
             Local Guide
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-10 print:gap-6">
+          <div className="grid md:grid-cols-3 gap-8 print:gap-6">
+
             {/* Distances */}
             <div className="md:col-span-1">
-              <h4 className="font-display text-xl text-[var(--color-forest)] mb-4">Distances</h4>
+              <h4 className="font-display text-lg text-[var(--color-forest)] mb-3">Distances</h4>
+              <DistRow place="Joe's Fine Coffee" time="2 min" />
               <DistRow place="Silver Lake Park" time="5 min" />
+              <DistRow place="Wake 'n Bakery" time="20 min" />
               <DistRow place="North Fork Brewery" time="20 min" />
               <DistRow place="Glacier, WA" time="20 min" />
               <DistRow place="Canadian border (Sumas)" time="25 min" />
@@ -452,49 +484,87 @@ export default function ManualPage() {
               <DistRow place="Mt. Baker Ski Area" time="52 min" />
               <DistRow place="Vancouver, BC" time="~90 min" />
 
-              <div className="mt-6 bg-[var(--color-forest)]/8 border-l-2 border-[var(--color-gold)] pl-4 py-3">
-                <p className="font-sans text-xs text-[var(--color-bark)]/70 leading-relaxed">
-                  <strong>Canada:</strong> Bring passports for every person in your group. The Sumas/Abbotsford crossing is 25 min away. Check border waits at bwt.cbp.gov before you go.
+              <div className="mt-5 bg-amber-50 border-l-2 border-amber-400 pl-3 py-2">
+                <p className="font-sans text-[10px] font-semibold text-amber-800 mb-1">🇨🇦 Canada — Bring Passports</p>
+                <p className="font-sans text-xs text-amber-900/80 leading-relaxed">
+                  Everyone in your group needs a valid passport. The Sumas/Abbotsford crossing is a short, easy drive — check wait times first at{' '}
+                  <span className="font-medium">bwt.cbp.gov</span>.
                 </p>
               </div>
             </div>
 
-            {/* Highlights */}
-            <div className="md:col-span-2 space-y-5">
+            {/* Highlights — 2 cols */}
+            <div className="md:col-span-2 grid sm:grid-cols-2 gap-x-8 gap-y-4 print:gap-y-3">
+
               <div>
-                <h4 className="font-display text-xl text-[var(--color-forest)] mb-1">North Fork Brewery — Glacier, WA</h4>
-                <p className="font-sans text-sm text-[var(--color-bark)]/75 leading-relaxed">
-                  Legendary pizza. House-brewed craft beer. Genuine mountain-village ambience. One of the best restaurants in rural Whatcom County — and a must-visit for any stay in the Mt. Baker area. 20 minutes up the highway. northforkbrewery.com
+                <h4 className="font-display text-base text-[var(--color-forest)] mb-0.5">
+                  Joe&apos;s Fine Coffee
+                </h4>
+                <p className="font-sans text-[10px] text-[var(--color-gold)] mb-1">Maple Falls · 2 min · joesfinecoffee.com</p>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
+                  Superb espresso, drip coffee, sandwiches, and pastries. Your closest coffee stop — right down the road in Maple Falls. Cozy, welcoming, local.
                 </p>
               </div>
 
               <div>
-                <h4 className="font-display text-xl text-[var(--color-forest)] mb-1">Silver Lake Park — 5 Min</h4>
-                <p className="font-sans text-sm text-[var(--color-bark)]/75 leading-relaxed">
-                  Kayaking, fishing, swimming, and picnicking right in the neighborhood. Bring the paddleboards or rent on-site. The lake is calm, clear, and genuinely beautiful. Great morning outing.
+                <h4 className="font-display text-base text-[var(--color-forest)] mb-0.5">
+                  Wake &apos;n Bakery
+                </h4>
+                <p className="font-sans text-[10px] text-[var(--color-gold)] mb-1">Glacier · 20 min · (360) 599-1658</p>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
+                  6903 Bourne St, Glacier. Open daily 7 am – 5 pm (summer). Coffee, baked goods, and serious Mt. Baker energy. Stop here on the way up to Baker. wakenbakeryglacier.com
                 </p>
               </div>
 
               <div>
-                <h4 className="font-display text-xl text-[var(--color-forest)] mb-1">Mt. Baker — 52 Min</h4>
-                <p className="font-sans text-sm text-[var(--color-bark)]/75 leading-relaxed">
-                  Deep powder, legendary snowfall, uncrowded runs in winter. Summer wildflower hikes and alpine trails are equally spectacular. The drive up Mt. Baker Highway is one of the most scenic roads in Washington.
+                <h4 className="font-display text-base text-[var(--color-forest)] mb-0.5">
+                  North Fork Brewery
+                </h4>
+                <p className="font-sans text-[10px] text-[var(--color-gold)] mb-1">Glacier · 20 min · (360) 599-2337</p>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
+                  6186 Mt. Baker Hwy, Deming. Open daily noon – 9 pm. Legendary pizza, house-brewed craft beer, genuine mountain-village ambience. A must-visit. northforkbrewery.com
                 </p>
               </div>
 
               <div>
-                <h4 className="font-display text-xl text-[var(--color-forest)] mb-1">Abbotsford, BC — ~30 Min</h4>
-                <p className="font-sans text-sm text-[var(--color-bark)]/75 leading-relaxed">
-                  Cross at the Sumas, WA border (bring passports). Once across: excellent restaurants, craft breweries, shopping. Top pick: Cactus Club Café (34650 Delair Rd) — upscale Canadian casual, great cocktails and food. Vancouver is 90 minutes further for a day trip.
+                <h4 className="font-display text-base text-[var(--color-forest)] mb-0.5">
+                  Silver Lake Park
+                </h4>
+                <p className="font-sans text-[10px] text-[var(--color-gold)] mb-1">Maple Falls · 5 min</p>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
+                  Kayaking, fishing, swimming, and picnicking right in the neighborhood. Calm, clear, beautiful. Great morning outing — bring paddleboards or rent on-site.
                 </p>
               </div>
 
               <div>
-                <h4 className="font-display text-xl text-[var(--color-forest)] mb-1">Bellingham — 45 Min</h4>
-                <p className="font-sans text-sm text-[var(--color-bark)]/75 leading-relaxed">
-                  Full services — Costco, grocery stores, waterfront, Whatcom Falls Park, breweries, and restaurants. Your main supply run if you need anything substantial.
+                <h4 className="font-display text-base text-[var(--color-forest)] mb-0.5">
+                  Cactus Club Café — Abbotsford, BC
+                </h4>
+                <p className="font-sans text-[10px] text-[var(--color-gold)] mb-1">~30 min · cactusclubcafe.com</p>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
+                  34650 Delair Rd, Abbotsford. Upscale Canadian casual — great cocktails, excellent food. Cross at Sumas (25 min), it&apos;s a short drive once over the border. <strong>Everyone needs a passport.</strong>
                 </p>
               </div>
+
+              <div>
+                <h4 className="font-display text-base text-[var(--color-forest)] mb-0.5">
+                  Mt. Baker — 52 Min
+                </h4>
+                <p className="font-sans text-[10px] text-[var(--color-gold)] mb-1">SR-542 east from Maple Falls</p>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
+                  Deep powder and uncrowded runs in winter. Summer wildflower hikes and alpine trails equally spectacular. One of the most scenic drives in Washington — allow time to stop.
+                </p>
+              </div>
+
+              <div className="sm:col-span-2">
+                <h4 className="font-display text-base text-[var(--color-forest)] mb-0.5">
+                  Bellingham — 45 Min
+                </h4>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
+                  Full services — Costco, grocery stores, waterfront, Whatcom Falls Park, breweries, and restaurants. Your main supply run for anything substantial.
+                </p>
+              </div>
+
             </div>
           </div>
         </section>
@@ -522,10 +592,11 @@ export default function ManualPage() {
                   <p className="font-sans text-xs text-[var(--color-bark)]/60 mt-1">2901 Squalicum Pkwy, Bellingham · ~45 min</p>
                 </div>
                 <div className="border border-[var(--color-forest)]/15 p-4 bg-white/50">
-                  <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-[var(--color-gold)] mb-1">Your Host</p>
+                  <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-[var(--color-gold)] mb-1">Your Hosts</p>
                   <p className="font-display text-xl text-[var(--color-forest)] font-light">Mike &amp; Angie Hughes</p>
                   <p className="font-sans text-xs text-[var(--color-bark)]/60 mt-1">mike@stayredmountain.com</p>
-                  <p className="font-sans text-xs text-[var(--color-bark)]/60">Live adjacent — genuinely available if you need anything</p>
+                  <p className="font-sans text-sm text-[var(--color-forest)] font-medium mt-1">360-410-8576</p>
+                  <p className="font-sans text-xs text-[var(--color-bark)]/60 mt-0.5">Live adjacent — genuinely available if you need anything</p>
                 </div>
                 <div className="border border-[var(--color-forest)]/15 p-4 bg-white/50">
                   <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-[var(--color-gold)] mb-1">Poison Control</p>
@@ -542,7 +613,6 @@ export default function ManualPage() {
 
               <ul className="space-y-4 mb-8">
                 <Rule icon="🚗" text="A car is required — there is no public transportation in Maple Falls." />
-                <Rule icon="🌨️" text="4WD or AWD strongly recommended November through March. The road to the property is not maintained like city streets — plan your drive and check conditions before heading out." />
                 <Rule icon="📶" text="Cell service is limited in Maple Falls and along portions of the Mt. Baker Highway. Download offline maps before you leave. Signal returns near the ski area and along some stretches of the highway." />
                 <Rule icon="⛽" text="Fill up in Bellingham or Sumas before driving up the highway. Gas options thin out past Glacier." />
                 <Rule icon="🛂" text="Crossing to Canada: Sumas, WA / Abbotsford, BC crossing is 25 min away. Every person in your group needs a valid passport. Check border wait times at bwt.cbp.gov." />
