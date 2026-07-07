@@ -424,12 +424,12 @@ export default function ManualPage() {
               <h4 className="font-display text-xl text-[var(--color-forest)] mb-3">Trail Map</h4>
 
               {/* Map image */}
-              <div className="relative w-full aspect-square max-h-64 print:max-h-72 overflow-hidden mb-4">
+              <div className="relative w-full overflow-hidden mb-4 bg-[var(--color-cream-dark)] rounded-sm print:rounded-none" style={{ aspectRatio: '4/3' }}>
                 <Image
                   src="/images/trails.jpg"
                   alt="Property trail map"
                   fill
-                  className="object-cover object-top rounded-sm print:rounded-none"
+                  className="object-contain"
                 />
               </div>
 
