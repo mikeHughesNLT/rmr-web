@@ -253,7 +253,7 @@ export default function ManualPage() {
                 <Rule icon="❄️" text="4WD or AWD strongly recommended November through March. Plan your drive accordingly." />
                 <Rule icon="🛒" text="Nearest large grocery: Bellingham, 45 min. Small markets on Mt. Baker Hwy for forgotten items." />
                 <Rule icon="⚡" text="Power and internet outages are possible in severe mountain weather. Refunds are not issued for weather events." />
-                <Rule icon="🐻" text="Black bears are in the area — not aggressive, never been an issue. Don't leave food out. Bear spray is sensible." />
+                <Rule icon="🐻" text="Black bears are in the area and occasionally spotted — they are shy and will run when they sense you. Two bear spray canisters are stored outside: treat it like an airline safety demo, not a daily necessity." />
                 <Rule icon="🔐" text="Lock the lodge when leaving. The smart lock code closes the door — confirm it latches." />
                 <Rule icon="🧹" text="Leave it tidy: dishes done, garbage bagged. A $200 additional cleaning fee applies for excessive mess." />
               </ul>
@@ -401,11 +401,22 @@ export default function ManualPage() {
               />
               <Space
                 name="Wildlife"
-                desc="Deer pass beneath the sauna deck regularly — a genuine highlight. Black bears are in the area but have never been a nuisance; secure all food and garbage. Bobcats, raccoons, bats, and eagles are regulars. No hunting on the property."
+                desc="Deer pass beneath the sauna deck regularly — a genuine highlight. Bobcats, raccoons, bats, and eagles are all regulars. No hunting on the property."
               />
 
+              {/* Bear note */}
+              <div className="bg-[var(--color-forest)]/8 border-l-2 border-[var(--color-gold)] pl-4 py-3 mb-4">
+                <p className="font-sans text-xs font-semibold text-[var(--color-forest)] mb-1">🐻 A note on black bears</p>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
+                  Black bears have been spotted on and around the property over the years — Mike has seen them and on occasion shooed them off. Out of an abundance of caution, two bear spray canisters are stored outside the lodge; you&apos;re welcome to take one on the trails.
+                </p>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed mt-2">
+                  That said: black bears are categorically different from grizzlies or brown bears. They are naturally shy and will almost always flee the moment they detect a human — by sight or smell. Think of the bear spray the way you think of an airline safety demo: better to have it and not need it. For context, the 20-minute drive up to the property is statistically orders of magnitude more eventful than anything you&apos;re likely to encounter in these woods.
+                </p>
+              </div>
+
               {/* Cave photo */}
-              <div className="mt-4 relative h-32 overflow-hidden">
+              <div className="mt-4 relative h-56 overflow-hidden">
                 <Image
                   src="/images/cave.jpg"
                   alt="The Gold Mine cave entrance"
@@ -473,7 +484,7 @@ export default function ManualPage() {
             {/* Distances */}
             <div className="md:col-span-1">
               <h4 className="font-display text-lg text-[var(--color-forest)] mb-3">Distances</h4>
-              <DistRow place="Joe's Fine Coffee" time="2 min" />
+              <DistRow place="Joe's Fine Coffee" time="10 min" />
               <DistRow place="Silver Lake Park" time="5 min" />
               <DistRow place="Wake 'n Bakery" time="20 min" />
               <DistRow place="North Fork Brewery" time="20 min" />
@@ -500,7 +511,7 @@ export default function ManualPage() {
                 <h4 className="font-display text-base text-[var(--color-forest)] mb-0.5">
                   Joe&apos;s Fine Coffee
                 </h4>
-                <p className="font-sans text-[10px] text-[var(--color-gold)] mb-1">Maple Falls · 2 min · joesfinecoffee.com</p>
+                <p className="font-sans text-[10px] text-[var(--color-gold)] mb-1">Maple Falls · 10 min · joesfinecoffee.com</p>
                 <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
                   Superb espresso, drip coffee, sandwiches, and pastries. Your closest coffee stop — right down the road in Maple Falls. Cozy, welcoming, local.
                 </p>
@@ -520,7 +531,7 @@ export default function ManualPage() {
                 <h4 className="font-display text-base text-[var(--color-forest)] mb-0.5">
                   North Fork Brewery
                 </h4>
-                <p className="font-sans text-[10px] text-[var(--color-gold)] mb-1">Glacier · 20 min · (360) 599-2337</p>
+                <p className="font-sans text-[10px] text-[var(--color-gold)] mb-1">Deming · 20 min · (360) 599-2337</p>
                 <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
                   6186 Mt. Baker Hwy, Deming. Open daily noon – 9 pm. Legendary pizza, house-brewed craft beer, genuine mountain-village ambience. A must-visit. northforkbrewery.com
                 </p>
