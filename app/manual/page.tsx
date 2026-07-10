@@ -391,6 +391,37 @@ export default function ManualPage() {
                 Outdoors &<br />On the Land
               </h3>
 
+              {/* Acreage / ownership block */}
+              <div className="mb-6">
+                <h4 className="font-display text-lg text-[var(--color-forest)] font-medium mb-2">The Land</h4>
+                <p className="font-sans text-sm text-[var(--color-bark)]/75 leading-relaxed mb-3">
+                  The property is owned collectively by Mike and Angie Hughes and Mike&apos;s sister, Dr. Laura Fox — approximately 90 acres across three contiguous parcels.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[var(--color-gold)] shrink-0 mt-1.5" />
+                    <div>
+                      <p className="font-sans text-xs font-semibold text-[var(--color-forest)]">25 acres — Main grounds <span className="font-normal text-[var(--color-gold)]">(exclusively yours)</span></p>
+                      <p className="font-sans text-xs text-[var(--color-bark)]/70 leading-relaxed mt-0.5">The lodge, Cedar Hall, sauna, fire pit, and lawn. When you rent, this is entirely yours — no shared access, no neighbors on-site. Complete privacy.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-green-600 shrink-0 mt-1.5" />
+                    <div>
+                      <p className="font-sans text-xs font-semibold text-[var(--color-forest)]">20 acres — Northern trails <span className="font-normal text-[var(--color-bark)]/50">(open to all)</span></p>
+                      <p className="font-sans text-xs text-[var(--color-bark)]/70 leading-relaxed mt-0.5">Mike and Angie&apos;s hand-built trail network through the northern forest. Yours to explore freely. Mike and Angie may occasionally trail-run or ride through — it&apos;s their land too — but you have full access.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-blue-500 shrink-0 mt-1.5" />
+                    <div>
+                      <p className="font-sans text-xs font-semibold text-[var(--color-forest)]">~45 acres — Up Red Mountain <span className="font-normal text-[var(--color-bark)]/50">(open to all)</span></p>
+                      <p className="font-sans text-xs text-[var(--color-bark)]/70 leading-relaxed mt-0.5">The upper acreage rises toward Red Mountain and connects to adjacent state land. The green trail climbs into genuine old-growth forest from here — the most remote and rewarding terrain on the property.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <Space
                 name="Fire Pit"
                 desc="Firewood is provided and stocked — the owners bring down more than enough from the land each winter. You will never run low. Light it at dark, pull up the Adirondack chairs, and take your time. Never leave the fire unattended."
