@@ -446,23 +446,35 @@ export default function ManualPage() {
                 </p>
               </div>
 
+            </div>
+
+            {/* Right — gold mine + trail map */}
+            <div>
               {/* Cave photo */}
-              <div className="mt-4 relative h-56 overflow-hidden">
+              <div className="relative h-52 overflow-hidden mb-3 rounded-sm print:rounded-none">
                 <Image
                   src="/images/cave.jpg"
                   alt="The Gold Mine cave entrance"
                   fill
-                  className="object-cover object-center rounded-sm print:rounded-none"
+                  className="object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-[var(--color-forest)]/25" />
                 <p className="absolute bottom-2 left-3 font-sans text-[10px] tracking-widest uppercase text-white/80">
                   The Gold Mine
                 </p>
               </div>
-            </div>
 
-            {/* Right — trail map */}
-            <div>
+              {/* Gold Mine description */}
+              <div className="mb-5">
+                <h4 className="font-display text-lg text-[var(--color-forest)] font-medium mb-1">The Gold Mine</h4>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed mb-2">
+                  Follow the yellow trail and you&apos;ll find a genuine piece of Northwest settler history — a turn-of-the-century gold mine drilled directly into bedrock, over 100 years old. The entrance has an Indiana Jones quality to it, though the tunnel itself runs only about 40 feet before an abrupt end. A natural spring flows from inside year-round.
+                </p>
+                <p className="font-sans text-xs text-[var(--color-bark)]/75 leading-relaxed">
+                  Heading east on the yellow trail, watch for where it bears uphill and then cuts left — the opening is about 50 yards up and will come on you quickly. The mine passes adjacent to Mike&apos;s personal shooting range, which is off-limits to guests.
+                </p>
+              </div>
+
               <h4 className="font-display text-xl text-[var(--color-forest)] mb-3">Trail Map</h4>
 
               {/* Map image */}
