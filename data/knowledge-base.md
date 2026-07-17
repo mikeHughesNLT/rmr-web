@@ -147,7 +147,9 @@ Dogs are welcome. No cats or other pets.
 | Mt. Baker Ski Area | 52 min |
 | Bellingham (full groceries, restaurants, city) | 45 min |
 
-**Silver Lake Park:** Kayaking, fishing, swimming, picnicking. Right in the neighborhood — 5 minutes away.
+**Silver Lake Park:** 5 minutes from the property. 410 acres, calm mountain lake between Red Mountain and Black Mountain. Kayak, canoe, pedal boat, and paddleboard rentals available from the park office during season. Fishing (WA license required), hiking trails, swimming area, picnic facilities. Six lakefront cabins and a Lakeside Lodge available year-round ($105–221/night). Campground open mid-April through October. No cell service or Wi-Fi at the park — by design. Day use hours 8 AM–dusk. (360) 778-5850. whatcomcounty.us. Note: Lagoon Bridge currently closed.
+
+**Maple Falls Community Park:** 6 miles east toward the village of Maple Falls. A free Whatcom County community park with a pump track (dirt berms and rollers, recently redesigned), outdoor fitness equipment (climbing structure, parallel bars, pull stations), open grass field, and concrete benches. On-leash dogs welcome. Open sunrise to sunset. Great for families with kids who want to ride bikes or burn energy. maplefallspark.com. Address: 7470 2nd St, Maple Falls, WA 98266.
 
 **North Fork Brewery (Glacier, WA — 20 min):** Legendary pizza. They craft their own beer. Great ambience. A genuine must-visit for anyone staying in the area — one of the best restaurants in rural Whatcom County. northforkbrewery.com
 

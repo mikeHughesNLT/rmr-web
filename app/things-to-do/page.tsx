@@ -323,6 +323,38 @@ export default function ThingsToDoPage() {
         </div>
       </section>
 
+      {/* Nearby Parks */}
+      <section className="bg-[var(--color-cream-dark)] py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">Right in the Neighborhood</p>
+          <h2 className="font-display text-4xl text-[var(--color-forest)] font-light mb-12">Nearby Parks</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Link href="/things-to-do/silver-lake-park" className="group bg-[var(--color-cream)] p-8 border-t-2 border-[var(--color-gold)] block hover:bg-[var(--color-forest)] transition-colors duration-300">
+              <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-2 font-sans">5 Minutes Away</p>
+              <h3 className="font-display text-3xl text-[var(--color-forest)] group-hover:text-white mb-3 transition-colors duration-300">Silver Lake Park</h3>
+              <p className="text-[var(--color-bark)]/70 group-hover:text-[var(--color-cream)]/70 font-sans text-sm leading-relaxed transition-colors duration-300">
+                410 acres, a calm mountain lake, kayak and paddleboard rentals, fishing, trails, and lakefront cabins.
+                No cell service. Five minutes from the lodge.
+              </p>
+              <span className="inline-block mt-4 text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase">
+                Explore →
+              </span>
+            </Link>
+            <Link href="/things-to-do/maple-falls-park" className="group bg-[var(--color-cream)] p-8 border-t-2 border-[var(--color-gold)] block hover:bg-[var(--color-forest)] transition-colors duration-300">
+              <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-2 font-sans">6 Miles East</p>
+              <h3 className="font-display text-3xl text-[var(--color-forest)] group-hover:text-white mb-3 transition-colors duration-300">Maple Falls Community Park</h3>
+              <p className="text-[var(--color-bark)]/70 group-hover:text-[var(--color-cream)]/70 font-sans text-sm leading-relaxed transition-colors duration-300">
+                A community-built neighborhood park with a pump track, outdoor fitness equipment, and open space
+                under the trees. Bring bikes. Dogs welcome on-leash.
+              </p>
+              <span className="inline-block mt-4 text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase">
+                Explore →
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-[var(--color-forest)] text-center py-20 px-6">
         <h2 className="font-display text-5xl text-white font-light mb-4">Ready to make it your base camp?</h2>
