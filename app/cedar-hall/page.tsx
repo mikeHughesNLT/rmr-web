@@ -15,12 +15,12 @@ const useCases = [
   {
     icon: "🤸",
     title: "Movement & Fitness",
-    desc: "Open floor, high ceiling, room to move. Yoga, stretching, combatives, dance, martial arts — or, quite frankly, an all-out dodgeball war. Mats arriving July 2026 (and yes, the foam gear is on order).",
+    desc: "Open floor, high ceiling, institutional-grade mats — now live. Yoga, stretching, combatives, dance, martial arts — or, quite frankly, an all-out dodgeball war.",
   },
   {
     icon: "🎬",
     title: "Movie Nights",
-    desc: "Blow up the inflatable screen, pull out the inflatable furniture, crank the in-wall ceiling speakers. Spill the popcorn everywhere? No problem — we open the garage doors and blow it out with the leaf blowers.",
+    desc: "Drop down the 120″ projection screen, pull out the inflatable camping couches, crank the in-wall ceiling speakers. Spill the popcorn everywhere? No problem — we open the garage doors and blow it out with the leaf blowers.",
   },
   {
     icon: "🧘",
@@ -30,7 +30,7 @@ const useCases = [
   {
     icon: "🏋️",
     title: "Sports & Training Camps",
-    desc: "Mats arriving July 2026. Coach a team, run drills, train together — then recover in the treehouse sauna. The only facility like this at a retreat property in the Mt. Baker area.",
+    desc: "Institutional-grade mats, now live. Coach a team, run drills, train together — then recover in the treehouse sauna. The only facility like this at a retreat property in the Mt. Baker area.",
   },
 ];
 
@@ -70,8 +70,8 @@ export default function CedarHallPage() {
               <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Open Floor</p>
             </div>
             <div>
-              <p className="font-display text-3xl text-[var(--color-gold)]">July</p>
-              <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Mats &apos;26</p>
+              <p className="font-display text-3xl text-[var(--color-gold)]">Live</p>
+              <p className="text-xs tracking-widest uppercase font-sans mt-1 opacity-70">Mats Now</p>
             </div>
           </div>
         </div>
@@ -89,10 +89,11 @@ export default function CedarHallPage() {
           {[
             "Three large panel rollup doors — open to the outdoors",
             "36′ × 26′ wide-open floor for any activity",
-            "Inflatable projection screen for movie night",
+            "Institutional-grade branded wrestling mats — now live",
+            "120″ drop-down projection screen for movie night",
             "In-wall ceiling speakers throughout",
             "Climate controlled with heat",
-            "Inflatable furniture for movies & lounging",
+            "Inflatable camping couches for movies & lounging",
             "Rustic log perimeter wall",
             "High ceiling for movement and sports",
           ].map(f => (
@@ -114,10 +115,48 @@ export default function CedarHallPage() {
         </div>
 
         <p className="text-[var(--color-bark)]/70 text-base leading-relaxed font-sans">
-          Mats are arriving <strong>July 2026</strong> — making Cedar Hall the only retreat property
-          in the Mt. Baker area with a dedicated space for wrestling, grappling, yoga, and combatives.
+          Cedar Hall is now the only retreat property in the Mt. Baker area with a dedicated mat floor
+          for wrestling, grappling, yoga, and combatives.
           Coaches, wrestling camps, BJJ squads: this is your facility.
         </p>
+      </section>
+
+      {/* Mat installation section */}
+      <section className="grid grid-cols-1 md:grid-cols-2">
+        <div className="bg-[var(--color-forest)] flex items-center p-12 md:p-16">
+          <div>
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">The Mats Are Here</p>
+            <h2 className="font-display text-4xl text-white font-light mb-6">Built for real use.</h2>
+            <p className="text-[var(--color-cream)]/70 font-sans text-sm leading-relaxed mb-4">
+              These aren&apos;t gym mats from a sporting goods store. They&apos;re institutional-quality, branded, custom-ordered —
+              the kind of mats you find in serious training facilities. The lead time reflected that. We waited.
+              The moment they arrived, we installed them.
+            </p>
+            <p className="text-[var(--color-cream)]/70 font-sans text-sm leading-relaxed mb-4">
+              The 36′ × 26′ floor is fully covered. What that unlocks: group yoga, jujutsu and grappling, family wrestling
+              when the rain rolls in, dodgeball that actually works, movement practice with real grip underfoot.
+              The energy in the space changed the moment the mats went down.
+            </p>
+            <p className="text-[var(--color-cream)]/50 font-sans text-sm leading-relaxed">
+              We&apos;re extraordinarily pleased. It adds a whole other dimension to Cedar Hall — and to the retreat
+              experience as a whole.
+            </p>
+          </div>
+        </div>
+        <div className="bg-black flex items-center justify-center p-8 md:p-12">
+          <div className="w-full max-w-xs mx-auto">
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans text-center">The Installation</p>
+            <div className="relative w-full overflow-hidden rounded" style={{ aspectRatio: "9/16" }}>
+              <iframe
+                src="https://www.youtube.com/embed/_QaE1F2R26w"
+                title="Cedar Hall mat installation at Red Mountain Retreat"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Use cases grid */}

@@ -50,7 +50,7 @@ Fully equipped for large group cooking. Counter space and seating for the kind o
 **Cedar Hall & Cedar Nook**
 840 sq ft former garage completely opened into a flex space. Three large rollup doors open to the outdoors. 120" drop-down projection screen. In-wall ceiling speakers. Climate controlled with heat. Rustic log perimeter wall.
 
-Summer 2026 additions: wrestling mats + inflatable furniture. The projector setup makes it a killer movie night space — bring popcorn, make a mess, build memories.
+Summer 2026: institutional-grade branded wrestling mats now live (36′ × 26′ full coverage). Drop-down 120″ projection screen (not inflatable). Inflatable camping couches. The mats were custom-ordered — institutional quality, branded — took time to arrive; installed immediately upon delivery. Cedar Hall is now the only retreat property in the Mt. Baker area with a dedicated mat floor for wrestling, grappling, yoga, and combatives. Great for: group yoga, jujutsu, BJJ, family wrestling when the weather is rough, dodgeball, movement practice.
 
 What people use it for: corporate offsites and presentations, yoga retreats and group fitness, kids zones (dodgeball, running around), team training drills, movie nights, wedding and event venue space, wellness movement sessions. It's intentionally "flexible" — there's no wrong answer.
 
@@ -280,6 +280,20 @@ Wrestling mats arriving Summer 2026. Cedar Hall for drills and training. Treehou
 
 **Chase Hughes — Live Music on the Steinway**
 Professional musician Chase Hughes (youtube.com/@pianicam) may be available for private performances at Red Mountain Retreat. The odds are unlikely — he's a working musician — but guests are welcome to inquire. Reach out via stayredmountain.com/contact to ask about availability.
+
+---
+
+## WHAT GUESTS NOTICE (recurring feedback themes)
+
+Three things guests consistently mention, unsolicited:
+
+**The peace.** The space, the privacy, the feeling of being genuinely away — while knowing the owners live adjacent and are available if anything comes up. You have the land. You have the quiet. They're nearby if you need them.
+
+**The water.** It comes from a deep well on the property. Guests notice it. It tastes clean and feels different — something you don't expect to be a talking point, but it is. People comment on it every time.
+
+**The air and energy.** The property is surrounded by an abundance of trees — Pacific Northwest rainforest. The air is noticeably clean and oxygen-rich. There's also an energy to the place that's harder to describe: the collective feeling of the land, the privacy, the trees, the owners' adjacent property. There's a hand-painted sign on the property that reads: "You are responsible for the energy you bring to this space." It was divinely inspired by Mike and Angie — and it reflects something real about Red Mountain Retreat. Guests feel it. It's a place to restore, reconnect, and rise.
+
+**Tagline:** Restore · Reconnect · Rise
 
 ---
 
