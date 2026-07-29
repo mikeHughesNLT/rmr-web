@@ -4,8 +4,12 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Gate all /manual routes — except the unlock page itself
-  if (pathname.startsWith('/manual') && !pathname.startsWith('/manual/unlock')) {
+  // Gate /manual routes (except the unlock page) and /manual-print
+  const isGated =
+    pathname === '/manual-print' ||
+    (pathname.startsWith('/manual') && !pathname.startsWith('/manual/unlock'));
+
+  if (isGated) {
     const auth = request.cookies.get('manual-auth');
     if (!auth || auth.value !== '1') {
       return NextResponse.redirect(new URL('/manual/unlock', request.url));
@@ -16,5 +20,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/manual/:path*'],
+  matcher: ['/manual/:path*', '/manual-print'],
 };
