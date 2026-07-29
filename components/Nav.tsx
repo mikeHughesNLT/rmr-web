@@ -22,11 +22,19 @@ const links: NavLink[] = [
   { href: "/sauna",         label: "Treehouse Sauna" },
   { href: "/things-to-do",  label: "Things To Do" },
   { href: "/contact",       label: "Contact" },
+  {
+    href: "/retreats",
+    label: "Retreats",
+    sub: [
+      { href: "/retreats",         label: "All Retreats" },
+      { href: "/retreats/couples", label: "Couples Retreat" },
+    ],
+  },
 ];
 
 export default function Nav() {
-  const [open, setOpen]   = useState(false);
-  const [dropOpen, setDropOpen] = useState(false);
+  const [open, setOpen]     = useState(false);
+  const [openDrop, setOpenDrop] = useState<string | null>(null);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-forest)]/90 backdrop-blur-sm">
@@ -44,8 +52,8 @@ export default function Nav() {
             "sub" in l ? (
               /* Dropdown item */
               <div key={l.href} className="relative"
-                onMouseEnter={() => setDropOpen(true)}
-                onMouseLeave={() => setDropOpen(false)}
+                onMouseEnter={() => setOpenDrop(l.href)}
+                onMouseLeave={() => setOpenDrop(null)}
               >
                 <Link href={l.href}
                   className="text-[var(--color-cream)]/80 hover:text-[var(--color-gold)] text-sm tracking-widest uppercase transition-colors font-sans flex items-center gap-1">
@@ -54,7 +62,7 @@ export default function Nav() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </Link>
-                {dropOpen && l.sub && (
+                {openDrop === l.href && l.sub && (
                   <div className="absolute top-full left-0 pt-2 min-w-[180px]">
                     <div className="bg-[var(--color-forest)] border border-white/10 py-2">
                       {l.sub.map(s => (
