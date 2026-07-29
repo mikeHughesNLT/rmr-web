@@ -32,7 +32,14 @@ async function notify(subject: string, text: string, smsText?: string) {
     );
   }
 
-  await Promise.allSettled(jobs);
+  const results = await Promise.allSettled(jobs);
+  results.forEach((r, i) => {
+    if (r.status === "rejected") {
+      console.error(`[contact] email job ${i} failed:`, r.reason);
+    } else {
+      console.log(`[contact] email job ${i} sent OK`);
+    }
+  });
 }
 
 async function postSlack(blocks: object[], fallback: string) {

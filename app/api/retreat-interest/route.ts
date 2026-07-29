@@ -25,26 +25,34 @@ export async function POST(req: NextRequest) {
   const transport = makeTransport();
   const from = `"Red Mountain Retreat" <${process.env.GMAIL_USER}>`;
 
-  await Promise.allSettled([
-    // Notify Mike
-    transport.sendMail({
-      from,
-      to: "mike@stayredmountain.com",
-      subject: `Couples Retreat interest — ${name}`,
-      text: [
-        `New couples retreat inquiry:`,
-        ``,
-        `Name:    ${name}`,
-        `Email:   ${email}`,
-        `Phone:   ${phone || "(not provided)"}`,
-        `Message: ${message || "(none)"}`,
-        ``,
-        `Submitted via stayredmountain.com/retreats/couples`,
-      ].join("\n"),
-    }),
+  // Send to both addresses to ensure delivery
+  const adminRecipients = ["mike@stayredmountain.com", process.env.GMAIL_USER].filter(Boolean).join(", ");
 
-    // Acknowledge to registrant
-    transport.sendMail({
+  const bodyText = [
+    `New couples retreat inquiry:`,
+    ``,
+    `Name:    ${name}`,
+    `Email:   ${email}`,
+    `Phone:   ${phone || "(not provided)"}`,
+    `Message: ${message || "(none)"}`,
+    ``,
+    `Submitted via stayredmountain.com/retreats/couples`,
+  ].join("\n");
+
+  try {
+    await transport.sendMail({
+      from,
+      to: adminRecipients,
+      subject: `Couples Retreat interest — ${name}`,
+      text: bodyText,
+    });
+    console.log(`[retreat-interest] Admin notification sent to ${adminRecipients}`);
+  } catch (err) {
+    console.error(`[retreat-interest] Failed to send admin notification:`, err);
+  }
+
+  try {
+    await transport.sendMail({
       from,
       to: email,
       subject: "We received your Red Mountain Couples Retreat inquiry",
@@ -67,8 +75,11 @@ export async function POST(req: NextRequest) {
           </p>
         </div>
       `,
-    }),
-  ]);
+    });
+    console.log(`[retreat-interest] Acknowledgement sent to ${email}`);
+  } catch (err) {
+    console.error(`[retreat-interest] Failed to send acknowledgement:`, err);
+  }
 
   return NextResponse.json({ success: true });
 }
