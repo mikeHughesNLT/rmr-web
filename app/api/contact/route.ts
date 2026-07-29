@@ -17,20 +17,13 @@ function makeTransport() {
 }
 
 async function notify(subject: string, text: string, smsText?: string) {
+  void smsText; // SMS via email gateway removed — AT&T txt.att.net discontinued
   const transport = makeTransport();
   const from = `"Red Mountain Retreat" <${process.env.GMAIL_USER}>`;
 
   const jobs: Promise<unknown>[] = [
     transport.sendMail({ from, to: process.env.GMAIL_USER, subject, text }),
   ];
-
-  // AT&T SMS gateway
-  if (process.env.NOTIFICATION_PHONE) {
-    const sms = `${process.env.NOTIFICATION_PHONE}@txt.att.net`;
-    jobs.push(
-      transport.sendMail({ from, to: sms, subject: "", text: smsText ?? text.slice(0, 140) })
-    );
-  }
 
   const results = await Promise.allSettled(jobs);
   results.forEach((r, i) => {
