@@ -62,18 +62,29 @@ export default function ManualPrintPage() {
     <>
       {/* ─── Styles ──────────────────────────────────────────────────────────── */}
       <style dangerouslySetInnerHTML={{ __html: `
+        @media screen {
+          .print-outer {
+            max-width: 816px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+          }
+          .print-section {
+            padding: 48px 62px;
+            border-bottom: 2px dashed rgba(200,150,62,0.2);
+          }
+          .print-section:last-of-type { border-bottom: none; }
+        }
         @media print {
-          @page          { size: letter portrait; margin: 0.65in; }
-          @page :first   { margin: 0; }
+          @page        { size: letter portrait; margin: 0.65in; }
+          @page :first { margin: 0; }
           header, footer, .no-print { display: none !important; }
           body { background: white !important; }
-          .print-break { page-break-before: always; break-before: page; padding-top: 0; }
+          .print-outer  { max-width: none !important; margin: 0 !important; padding: 0 !important; box-shadow: none !important; }
+          .print-section { padding: 0 !important; border: none !important; }
+          .print-break  { page-break-before: always; break-before: page; }
           .avoid-break  { page-break-inside: avoid; break-inside: avoid; }
           * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-        }
-        @media screen {
-          .print-section { border-bottom: 2px dashed rgba(200,150,62,0.25); }
-          .print-section:last-of-type { border-bottom: none; }
         }
       `}} />
 
@@ -87,7 +98,7 @@ export default function ManualPrintPage() {
       </div>
 
       {/* ─── Page wrapper ────────────────────────────────────────────────────── */}
-      <div className="max-w-[816px] mx-auto bg-white shadow-lg print:max-w-none print:shadow-none">
+      <div className="print-outer">
 
         {/* ══════════════════════════════════════════════════════════════════════
             PAGE 1 — COVER  (full bleed, no margins)
@@ -149,7 +160,7 @@ export default function ManualPrintPage() {
         {/* ══════════════════════════════════════════════════════════════════════
             PAGE 2 — WELCOME + QUICK REFERENCE
         ══════════════════════════════════════════════════════════════════════ */}
-        <div className="print-section print-break px-[62px] py-12 print:px-0 print:py-0">
+        <div className="print-section print-break">
 
           <SectionHead label="Welcome" title={<>Welcome to Your<br />Mountain Home</>} />
 
@@ -195,7 +206,7 @@ export default function ManualPrintPage() {
         {/* ══════════════════════════════════════════════════════════════════════
             PAGE 3 — HOUSE RULES + PRACTICAL NOTES
         ══════════════════════════════════════════════════════════════════════ */}
-        <div className="print-section print-break px-[62px] py-12 print:px-0 print:py-0">
+        <div className="print-section print-break">
           <div className="grid grid-cols-2 gap-10">
 
             <div>
@@ -241,7 +252,7 @@ export default function ManualPrintPage() {
         {/* ══════════════════════════════════════════════════════════════════════
             PAGE 4 — THE LODGE + BEDROOMS
         ══════════════════════════════════════════════════════════════════════ */}
-        <div className="print-section print-break px-[62px] py-12 print:px-0 print:py-0">
+        <div className="print-section print-break">
           <div className="grid grid-cols-2 gap-10">
 
             <div>
@@ -293,7 +304,7 @@ export default function ManualPrintPage() {
         {/* ══════════════════════════════════════════════════════════════════════
             PAGE 5 — THE SAUNA
         ══════════════════════════════════════════════════════════════════════ */}
-        <div className="print-section print-break px-[62px] py-12 print:px-0 print:py-0">
+        <div className="print-section print-break">
 
           <SectionHead label="The Signature Experience" title="The Treehouse Sauna" />
 
@@ -343,7 +354,7 @@ export default function ManualPrintPage() {
         {/* ══════════════════════════════════════════════════════════════════════
             PAGE 6 — OUTDOORS + TRAIL MAP
         ══════════════════════════════════════════════════════════════════════ */}
-        <div className="print-section print-break px-[62px] py-12 print:px-0 print:py-0">
+        <div className="print-section print-break">
           <div className="grid grid-cols-2 gap-10">
 
             <div>
@@ -419,7 +430,7 @@ export default function ManualPrintPage() {
         {/* ══════════════════════════════════════════════════════════════════════
             PAGE 7 — LOCAL GUIDE
         ══════════════════════════════════════════════════════════════════════ */}
-        <div className="print-section print-break px-[62px] py-12 print:px-0 print:py-0">
+        <div className="print-section print-break">
           <SectionHead label="Explore the Area" title="Local Guide" />
 
           <div className="grid grid-cols-3 gap-8">
@@ -476,7 +487,7 @@ export default function ManualPrintPage() {
         {/* ══════════════════════════════════════════════════════════════════════
             PAGE 8 — CONTACTS + GETTING AROUND
         ══════════════════════════════════════════════════════════════════════ */}
-        <div className="print-section print-break px-[62px] py-12 print:px-0 print:py-0">
+        <div className="print-section print-break">
           <div className="grid grid-cols-2 gap-10">
 
             <div>
