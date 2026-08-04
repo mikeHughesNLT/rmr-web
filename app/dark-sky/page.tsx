@@ -88,7 +88,7 @@ export default function DarkSkyPage() {
     <div className="min-h-screen" style={{ backgroundColor: "#080C10", color: "#F5EED8" }}>
 
       {/* ── ARCHIVE BANNER — remove this block to reactivate ── */}
-      <div className="w-full text-center py-3 px-6 text-sm" style={{ backgroundColor: "#1a1208", borderBottom: "1px solid #C8963E22", color: "#C8963E" }}>
+      <div className="w-full text-center py-3 px-6 text-sm mt-[76px]" style={{ backgroundColor: "#1a1208", borderBottom: "1px solid #C8963E22", color: "#C8963E" }}>
         This event has passed.{" "}
         <Link href="/book" style={{ color: "#F5EED8", textDecoration: "underline" }}>
           See upcoming availability →
