@@ -12,6 +12,8 @@ export const metadata: Metadata = {
       "Perseid meteor shower peak, Aug 12–13, 2026. Five hours of real astronomical darkness. Book direct — no fees.",
     url: "https://stayredmountain.com/dark-sky",
   },
+  // ── ARCHIVE: remove next two lines to reactivate for future dark-sky campaign ──
+  robots: { index: false, follow: false },
 };
 
 // ── Compass / light-pollution diagram ─────────────────────────────────────────
@@ -84,6 +86,15 @@ function CompassDiagram() {
 export default function DarkSkyPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#080C10", color: "#F5EED8" }}>
+
+      {/* ── ARCHIVE BANNER — remove this block to reactivate ── */}
+      <div className="w-full text-center py-3 px-6 text-sm" style={{ backgroundColor: "#1a1208", borderBottom: "1px solid #C8963E22", color: "#C8963E" }}>
+        This event has passed.{" "}
+        <Link href="/book" style={{ color: "#F5EED8", textDecoration: "underline" }}>
+          See upcoming availability →
+        </Link>
+      </div>
+      {/* ── END ARCHIVE BANNER ── */}
 
       {/* ── HERO ────────────────────────────────────────────────────────────── */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
