@@ -1,19 +1,13 @@
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
 import InterestForm from "./InterestForm";
+import RetreatChat from "./RetreatChat";
 
 export const metadata: Metadata = {
   title: "Couples Retreat — Red Mountain Retreat",
-  robots: { index: false, follow: false },
 };
 
 export default async function CouplesRetreatPage() {
-  const cookieStore = await cookies();
-  const authed = cookieStore.get("couples-retreat-auth")?.value === "1";
-  if (!authed) redirect("/retreats/couples/unlock");
-
   return (
     <div className="bg-[var(--color-cream)]">
 
@@ -29,7 +23,7 @@ export default async function CouplesRetreatPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-forest)]/90 via-[var(--color-forest)]/30 to-transparent" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 pb-20 w-full">
           <p className="font-sans text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] mb-3">
-            Red Mountain Retreat · March 12–14, 2027
+            Red Mountain Retreat · Spring &amp; Fall 2027
           </p>
           <h1 className="font-display text-5xl md:text-6xl text-white font-light leading-tight mb-4">
             Red Mountain<br />Couples Retreat
@@ -66,6 +60,20 @@ export default async function CouplesRetreatPage() {
         </div>
       </section>
 
+      {/* Mike's vision pull quote */}
+      <section className="bg-[#f0e9da] py-16">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <p className="font-display text-2xl md:text-3xl text-[var(--color-forest)] font-light leading-relaxed mb-6">
+            &ldquo;Two whole and restored people make for a holy, healthy marriage.
+            Red Mountain is the holy ground where I believe the Holy Spirit
+            will have an encounter with us.&rdquo;
+          </p>
+          <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[var(--color-gold)]">
+            Mike Hughes · Red Mountain Retreat
+          </p>
+        </div>
+      </section>
+
       {/* What you get */}
       <section className="bg-[var(--color-forest)] py-20">
         <div className="max-w-4xl mx-auto px-6">
@@ -92,7 +100,7 @@ export default async function CouplesRetreatPage() {
               {
                 num: "04",
                 title: "Two Nights at Red Mountain Lodge",
-                body: "Check in Friday March 12. Full-day activities Friday and Saturday. Morning prayer and safe travels Sunday March 14. 25 private acres, Treehouse Sauna, the great room, cedar forest — all yours.",
+                body: "Check in Friday evening. Full-day activities Friday and Saturday. Morning prayer and safe travels Sunday. 25 private acres, Treehouse Sauna, the great room, cedar forest — all yours.",
               },
             ].map(({ num, title, body }) => (
               <div key={num} className="border border-white/10 p-8">
@@ -113,7 +121,7 @@ export default async function CouplesRetreatPage() {
         <div className="space-y-8">
           {[
             {
-              day: "Friday, March 12",
+              day: "Friday",
               items: [
                 "Arrival & check-in",
                 "Welcome dinner",
@@ -121,7 +129,7 @@ export default async function CouplesRetreatPage() {
               ],
             },
             {
-              day: "Saturday, March 13",
+              day: "Saturday",
               items: [
                 "Morning session — deep-dive teaching & couple exercises",
                 "Afternoon free time (sauna, trails, rest, private reflection)",
@@ -130,7 +138,7 @@ export default async function CouplesRetreatPage() {
               ],
             },
             {
-              day: "Sunday, March 14",
+              day: "Sunday",
               items: [
                 "Morning prayer & commissioning",
                 "Farewell & safe travels",
@@ -248,8 +256,59 @@ export default async function CouplesRetreatPage() {
         </div>
       </section>
 
+      {/* Upcoming dates + pricing */}
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <p className="font-sans text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] mb-4">
+          Dates
+        </p>
+        <p className="font-display text-3xl text-[var(--color-forest)] font-light mb-10">
+          Two Weekends in 2027
+        </p>
+        <div className="grid sm:grid-cols-2 gap-6 mb-12">
+          {[
+            { label: "Spring", dates: "March 12–14, 2027", detail: "Friday arrival · Sunday departure" },
+            { label: "Fall", dates: "September 17–19, 2027", detail: "Friday arrival · Sunday departure" },
+          ].map(({ label, dates, detail }) => (
+            <div key={label} className="border border-[var(--color-forest)]/15 p-8 bg-white/50">
+              <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[var(--color-gold)] mb-3">{label}</p>
+              <p className="font-display text-2xl text-[var(--color-forest)] font-light mb-2">{dates}</p>
+              <p className="font-sans text-[var(--color-bark)]/60 text-xs">{detail}</p>
+            </div>
+          ))}
+        </div>
+        <div className="max-w-2xl">
+          <p className="font-sans text-[var(--color-bark)] text-[15px] leading-relaxed mb-2">
+            Pricing is per couple and covers two nights at the lodge, all meals from Friday dinner
+            through Sunday morning, the full seven-week curriculum, workbooks, and facilitation.
+          </p>
+          <p className="font-sans text-[var(--color-bark)]/60 text-sm leading-relaxed">
+            Have questions about pricing?{" "}
+            <a href="#ask" className="text-[var(--color-forest)] underline underline-offset-2">
+              Ask below
+            </a>{" "}
+            or fill out the interest form and we&apos;ll follow up personally.
+          </p>
+        </div>
+      </section>
+
+      {/* Chatbot */}
+      <section className="bg-[var(--color-forest)] py-20" id="ask">
+        <div className="max-w-2xl mx-auto px-6">
+          <p className="font-sans text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] mb-4 text-center">
+            Questions
+          </p>
+          <p className="font-display text-3xl text-white font-light text-center mb-3">
+            Have a question about the retreat?
+          </p>
+          <p className="font-sans text-white/60 text-sm text-center mb-10">
+            Ask here — pricing, schedule, who this is for, what to expect.
+          </p>
+          <RetreatChat />
+        </div>
+      </section>
+
       {/* Interest form */}
-      <section className="bg-[var(--color-forest)] py-20" id="register">
+      <section className="bg-[var(--color-forest)] py-20 border-t border-white/10" id="register">
         <div className="max-w-2xl mx-auto px-6">
           <p className="font-sans text-[10px] tracking-[0.4em] uppercase text-[var(--color-gold)] mb-4 text-center">
             Register Your Interest
@@ -258,7 +317,7 @@ export default async function CouplesRetreatPage() {
             Reserve Your Spot
           </p>
           <p className="font-sans text-white/60 text-sm text-center mb-10">
-            Spots are limited. Fill out the form below and we&apos;ll follow up with pricing,
+            Spots are limited. Fill out the form and we&apos;ll follow up with pricing,
             logistics, and next steps.
           </p>
           <InterestForm />

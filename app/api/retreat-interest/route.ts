@@ -25,8 +25,13 @@ export async function POST(req: NextRequest) {
   const transport = makeTransport();
   const from = `"Red Mountain Retreat" <${process.env.GMAIL_USER}>`;
 
-  // Send to both addresses to ensure delivery
-  const adminRecipients = ["mike@stayredmountain.com", process.env.GMAIL_USER].filter(Boolean).join(", ");
+  const adminRecipients = [
+    "mike@stayredmountain.com",
+    process.env.GMAIL_USER,
+    "samsill6@hotmail.com",
+    "trusmail@gmail.com",
+    "angiehughesca@yahoo.com",
+  ].filter(Boolean).join(", ");
 
   const bodyText = [
     `New couples retreat inquiry:`,
