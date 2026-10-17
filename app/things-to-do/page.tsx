@@ -243,41 +243,130 @@ export default function ThingsToDoPage() {
         </div>
       </section>
 
-      {/* Food & Drink */}
-      <section className="grid grid-cols-1 md:grid-cols-2">
-        <div className="bg-[var(--color-bark)] flex items-center p-12 md:p-16">
-          <div>
-            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-6 font-sans">After the Hike</p>
-            <div className="mb-6">
-              <Image
-                src="/images/north-fork-brewery-logo.jpg"
-                alt="The North Fork Brewery — Pizzeria & Beer Shrine"
-                width={140}
-                height={210}
-                className="rounded"
-              />
+      {/* Food & Drink Nearby */}
+      <section className="bg-[var(--color-cream-dark)] py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-4 font-sans">Eating, Drinking &amp; Stocking Up</p>
+          <h2 className="font-display text-4xl text-[var(--color-forest)] font-light mb-12">Food &amp; Drink Nearby</h2>
+
+          {/* Maple Falls */}
+          <div className="mb-14">
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-2 font-sans">Maple Falls · 12 Min</p>
+            <h3 className="font-display text-2xl text-[var(--color-forest)] mb-3">Right Down the Road</h3>
+            <p className="text-[var(--color-bark)]/70 font-sans text-sm leading-relaxed mb-6 max-w-3xl">
+              For small-town stores, both Maple Falls groceries are shockingly well stocked —
+              whatever you forgot or need mid-stay is probably on the shelf.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-[var(--color-cream)] p-8 border-t-2 border-[var(--color-gold)]">
+                <p className="text-[var(--color-bark)]/40 font-sans text-[10px] tracking-widest uppercase mb-2">Morning Coffee</p>
+                <h4 className="font-display text-xl text-[var(--color-forest)] mb-3">Joe&apos;s Fine Coffee</h4>
+                <p className="text-[var(--color-bark)]/70 font-sans text-sm leading-relaxed mb-4">
+                  Want to get out for morning coffee? This is the move — and the drive is half of it.
+                  S. Pass Rd is a really nice drive, running right along the Canadian border into
+                  Maple Falls. About 12 minutes from the lodge.
+                </p>
+                <a href="https://www.joesfinecoffee.com/" target="_blank" rel="noopener noreferrer"
+                  className="text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase hover:text-[var(--color-gold-light)] transition-colors">
+                  joesfinecoffee.com →
+                </a>
+              </div>
+              <div className="bg-[var(--color-cream)] p-8 border-t-2 border-[var(--color-gold)]">
+                <p className="text-[var(--color-bark)]/40 font-sans text-[10px] tracking-widest uppercase mb-2">Groceries &amp; Gas</p>
+                <h4 className="font-display text-xl text-[var(--color-forest)] mb-3">Maple Fuels</h4>
+                <p className="text-[var(--color-bark)]/70 font-sans text-sm leading-relaxed mb-4">
+                  The local grocery-and-gas stop. Small, local, and shockingly well stocked for the
+                  things you actually need mid-stay — and yes, it has gas.
+                </p>
+                <a href="https://www.facebook.com/p/Maple-Fuels-100063632648185/" target="_blank" rel="noopener noreferrer"
+                  className="text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase hover:text-[var(--color-gold-light)] transition-colors">
+                  Maple Fuels on Facebook →
+                </a>
+              </div>
+              <div className="bg-[var(--color-cream)] p-8 border-t-2 border-[var(--color-gold)]">
+                <p className="text-[var(--color-bark)]/40 font-sans text-[10px] tracking-widest uppercase mb-2">Groceries &amp; Supplies</p>
+                <h4 className="font-display text-xl text-[var(--color-forest)] mb-3">Crossroads Grocery</h4>
+                <p className="text-[var(--color-bark)]/70 font-sans text-sm leading-relaxed mb-4">
+                  Right next door, with even more — groceries, supplies, and genuine mountain-local
+                  culture. Also shockingly well stocked for such a small local store.
+                </p>
+                <a href="https://www.facebook.com/crossroadsgrocery/" target="_blank" rel="noopener noreferrer"
+                  className="text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase hover:text-[var(--color-gold-light)] transition-colors">
+                  Crossroads on Facebook →
+                </a>
+              </div>
             </div>
-            <p className="text-[var(--color-cream)]/70 font-sans text-sm leading-relaxed mb-4">
-              North Fork Brewery in Deming is the classic Mt. Baker Highway stop: craft beer, legendary pizza, and the
-              kind of local character that cannot be manufactured. It is the right place to end a day on the mountain —
-              still in the foothills, still among the trees, with a pint and the feeling of a day well spent.
-            </p>
-            <a href="https://www.northforkbrewery.com/" target="_blank" rel="noopener noreferrer"
-              className="text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase hover:text-[var(--color-gold-light)] transition-colors">
-              northforkbrewery.com →
-            </a>
-            <p className="text-[var(--color-cream)]/40 font-sans text-xs mt-2">
-              6186 Mt. Baker Hwy, Deming · Open daily from noon
-            </p>
           </div>
-        </div>
-        <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[400px]">
-          <Image
-            src="/images/exterior-bridge.jpg"
-            alt="Mountain foothills near Red Mountain Retreat"
-            fill
-            className="object-cover"
-          />
+
+          {/* Glacier */}
+          <div className="mb-14">
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-2 font-sans">Glacier · Toward the Mountain</p>
+            <h3 className="font-display text-2xl text-[var(--color-forest)] mb-3">The Last Town Before the Mountain</h3>
+            <p className="text-[var(--color-bark)]/70 font-sans text-sm leading-relaxed mb-6 max-w-3xl">
+              Glacier is the last small town before Hwy 542 climbs east into the Mt. Baker–Snoqualmie
+              National Forest — and the first town down from the Mt. Baker Ski Area. Real mountain-town culture.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-[var(--color-cream)] p-8 border-t-2 border-[var(--color-gold)]">
+                <p className="text-[var(--color-bark)]/40 font-sans text-[10px] tracking-widest uppercase mb-2">Breakfast &amp; Coffee</p>
+                <h4 className="font-display text-xl text-[var(--color-forest)] mb-3">Wake n&apos; Bakery</h4>
+                <p className="text-[var(--color-bark)]/70 font-sans text-sm leading-relaxed mb-4">
+                  Headed toward Glacier for an early morning venture? Strongly recommend stopping here —
+                  it&apos;s a bit more of a drive, and worth it. The breakfast burritos, sandwiches, and
+                  coffee are great.
+                </p>
+                <a href="https://www.wakenbakeryglacier.com/" target="_blank" rel="noopener noreferrer"
+                  className="text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase hover:text-[var(--color-gold-light)] transition-colors">
+                  wakenbakeryglacier.com →
+                </a>
+              </div>
+              <div className="bg-[var(--color-cream)] p-8 border-t-2 border-[var(--color-gold)]">
+                <p className="text-[var(--color-bark)]/40 font-sans text-[10px] tracking-widest uppercase mb-2">BBQ &amp; Tex-Mex</p>
+                <h4 className="font-display text-xl text-[var(--color-forest)] mb-3">Gunner&apos;s BBQ</h4>
+                <p className="text-[var(--color-bark)]/70 font-sans text-sm leading-relaxed mb-4">
+                  Barbecue and Tex-Mex — and it is really good. Be sure to check the hours and call
+                  ahead to make sure they&apos;re open. If you go and you like corn, get the Elote.
+                </p>
+                <a href="https://www.gunnersbbq.net/" target="_blank" rel="noopener noreferrer"
+                  className="text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase hover:text-[var(--color-gold-light)] transition-colors">
+                  gunnersbbq.net →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Deming */}
+          <div>
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-2 font-sans">Deming · On Hwy 542</p>
+            <h3 className="font-display text-2xl text-[var(--color-forest)] mb-6">The Classic Post-Mountain Stop</h3>
+            <div className="bg-[var(--color-cream)] p-8 border-t-2 border-[var(--color-gold)] flex flex-col sm:flex-row gap-8">
+              <div className="shrink-0">
+                <Image
+                  src="/images/north-fork-brewery-logo.jpg"
+                  alt="The North Fork Brewery — Pizzeria & Beer Shrine"
+                  width={110}
+                  height={165}
+                  className="rounded"
+                />
+              </div>
+              <div>
+                <h4 className="font-display text-xl text-[var(--color-forest)] mb-3">North Fork Brewery</h4>
+                <p className="text-[var(--color-bark)]/70 font-sans text-sm leading-relaxed mb-4">
+                  The classic Mt. Baker Highway stop: craft beer, legendary pizza, and the kind of
+                  local character that cannot be manufactured. The right place to end a day on the
+                  mountain — still in the foothills, still among the trees, with a pint and the
+                  feeling of a day well spent.
+                </p>
+                <a href="https://www.northforkbrewery.com/" target="_blank" rel="noopener noreferrer"
+                  className="text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase hover:text-[var(--color-gold-light)] transition-colors">
+                  northforkbrewery.com →
+                </a>
+                <p className="text-[var(--color-bark)]/40 font-sans text-xs mt-2">
+                  6186 Mt. Baker Hwy, Deming · Open daily from noon
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -298,13 +387,19 @@ export default function ThingsToDoPage() {
           </div>
 
           <div className="border-t-2 border-[var(--color-gold)] pt-6">
-            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-2 font-sans">Cross the Border</p>
-            <h3 className="font-display text-3xl text-[var(--color-forest)] mb-3">Abbotsford, B.C.</h3>
+            <p className="text-[var(--color-gold)] text-xs tracking-[0.3em] uppercase mb-2 font-sans">Thinking International</p>
+            <h3 className="font-display text-3xl text-[var(--color-forest)] mb-3">Canada — Abbotsford &amp; Vancouver</h3>
             <p className="text-[var(--color-bark)]/70 font-sans text-sm leading-relaxed mb-3">
-              Guests with passports can turn the stay into a cross-border experience. Abbotsford is 15 minutes past the
-              crossing — restaurants, shopping, and a change of pace without a full Vancouver-scale commitment. Cactus
-              Club Cafe on Delair Road is a solid dinner option.
+              The border is shockingly close — about 20 minutes — so if you&apos;re coming from out of
+              town, bring your passport. Cross over and Abbotsford greets you right away with a
+              cosmopolitan change of pace and an international vibe. A local favorite: Cactus Club
+              Cafe, a very nice, comfortable restaurant. And Vancouver is only about 65 miles away —
+              concerts and events at BC Place are a genuine option.
             </p>
+            <a href="https://www.cactusclubcafe.com/locations/abbotsford/" target="_blank" rel="noopener noreferrer"
+              className="inline-block text-[var(--color-gold)] font-sans text-xs tracking-widest uppercase hover:text-[var(--color-gold-light)] transition-colors mb-3">
+              Cactus Club — Abbotsford →
+            </a>
             <p className="text-[var(--color-bark)]/40 font-sans text-xs">
               Border wait times and documentation requirements vary. Check current requirements before planning a Canada outing.
             </p>

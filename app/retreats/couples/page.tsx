@@ -209,7 +209,7 @@ export default async function CouplesRetreatPage() {
           <div className="flex flex-col md:flex-row gap-12 items-start">
             <div className="relative w-full md:w-80 h-96 shrink-0">
               <Image
-                src="/images/steve-trudy.jpg"
+                src="/images/steve-trudy-sunset.jpg"
                 alt="Steve and Trudy Samsill"
                 fill
                 className="object-cover"

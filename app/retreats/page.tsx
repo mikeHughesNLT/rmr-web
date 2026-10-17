@@ -93,13 +93,22 @@ export default function RetreatsPage() {
                 Learn More
               </Link>
             </div>
-            <div className="relative w-full md:w-64 h-48 md:h-auto md:self-stretch shrink-0">
-              <Image
-                src="/images/great-room.jpg"
-                alt="Great room at Red Mountain Retreat"
-                fill
-                className="object-cover"
-              />
+            <div className="relative w-full md:w-64 h-48 md:h-auto md:self-stretch shrink-0 bg-[var(--color-forest)] flex items-center justify-center">
+              <svg viewBox="0 0 100 100" className="w-24 h-24 md:w-32 md:h-32" role="img" aria-label="Heart with a cross">
+                <path
+                  d="M50 85 C20 60 10 42 10 28 C10 16 19 8 30 8 C39 8 46 13 50 21 C54 13 61 8 70 8 C81 8 90 16 90 28 C90 42 80 60 50 85 Z"
+                  fill="none"
+                  stroke="var(--color-gold)"
+                  strokeWidth="2.5"
+                />
+                <path
+                  d="M50 26 V52 M40 35 H60"
+                  fill="none"
+                  stroke="var(--color-cream)"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
+              </svg>
             </div>
           </div>
 
