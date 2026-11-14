@@ -29,9 +29,9 @@ const locations = [
     img: "/images/bedroom1-master-a.jpg",
   },
   {
-    title: "The downstairs bedroom",
-    body: "Tucked away from the rest of the house, easy to set up and settle in.",
-    img: "/images/bedroom4.jpg",
+    title: "The den bedroom",
+    body: "A private main-floor room with a cozy potbelly stove — tucked away from the rest of the house.",
+    img: "/images/bedroom2.jpg",
   },
   {
     title: "In the forest",
@@ -47,7 +47,7 @@ const requestBody = [
   "Dates of our stay:",
   "Preferred day and time:",
   "Session (1 hour or 3-hour block):",
-  "Location (master bedroom, downstairs bedroom, or forest):",
+  "Location (master bedroom, den bedroom, or forest):",
   "Number of guests who'd like a massage:",
   "Anything Sasha should know:",
 ].join("\n");
