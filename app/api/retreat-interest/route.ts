@@ -34,10 +34,11 @@ export async function POST(req: NextRequest) {
   ].filter(Boolean).join(", ");
 
   const bodyText = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    ``,
     `New couples retreat inquiry:`,
     ``,
-    `Name:    ${name}`,
-    `Email:   ${email}`,
     `Phone:   ${phone || "(not provided)"}`,
     `Message: ${message || "(none)"}`,
     ``,
@@ -48,6 +49,7 @@ export async function POST(req: NextRequest) {
     await transport.sendMail({
       from,
       to: adminRecipients,
+      replyTo: { name: name.replace(/[\r\n]/g, "").trim(), address: email.replace(/[\r\n]/g, "").trim() },
       subject: `Couples Retreat interest — ${name}`,
       text: bodyText,
     });

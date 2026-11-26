@@ -27,8 +27,18 @@ export async function POST(req: NextRequest) {
     transport.sendMail({
       from,
       to: process.env.GMAIL_USER,
+      replyTo: email.replace(/[\r\n]/g, "").trim(),
       subject: "🌠 Perseid Guide lead captured",
-      text: `New email captured from /dark-sky landing page:\n\n${email}\n\nAdd to your list.`,
+      text: [
+        `Name: (not provided)`,
+        `Email: ${email}`,
+        ``,
+        `New email captured from /dark-sky landing page:`,
+        ``,
+        email,
+        ``,
+        `Add to your list.`,
+      ].join("\n"),
     }),
 
     // Acknowledge to subscriber

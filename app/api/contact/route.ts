@@ -16,13 +16,19 @@ function makeTransport() {
   });
 }
 
-async function notify(subject: string, text: string, smsText?: string) {
+function replyToSubmitter(name: string, email: string) {
+  const address = email.replace(/[\r\n]/g, "").trim();
+  const cleanName = name.replace(/[\r\n]/g, "").trim();
+  return cleanName ? { name: cleanName, address } : address;
+}
+
+async function notify(subject: string, text: string, replyTo: string | { name: string; address: string }, smsText?: string) {
   void smsText; // SMS via email gateway removed — AT&T txt.att.net discontinued
   const transport = makeTransport();
   const from = `"Red Mountain Retreat" <${process.env.GMAIL_USER}>`;
 
   const jobs: Promise<unknown>[] = [
-    transport.sendMail({ from, to: process.env.GMAIL_USER, subject, text }),
+    transport.sendMail({ from, to: process.env.GMAIL_USER, replyTo, subject, text }),
   ];
 
   const results = await Promise.allSettled(jobs);
@@ -87,7 +93,13 @@ export async function POST(req: NextRequest) {
     await Promise.allSettled([
       notify(
         "🚨 CALL REQUESTED — Red Mountain Retreat",
-        `${name} (${email}) clicked "Call me now" on the contact form.`
+        [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          ``,
+          `${name} (${email}) clicked "Call me now" on the contact form.`,
+        ].join("\n"),
+        replyToSubmitter(name ?? "", email ?? ""),
       ),
       postSlack([{
         type: "section",
@@ -124,6 +136,9 @@ export async function POST(req: NextRequest) {
 
   // ── Notifications ─────────────────────────────────────────────────────────
   const emailBody = [
+    `Name: ${name}`,
+    `Email: ${email}`,
+    ``,
     `New inquiry from ${name} <${email}>`,
     `Dates: ${dates || "—"}`,
     `Group: ${group_size || "—"}`,
@@ -158,7 +173,7 @@ export async function POST(req: NextRequest) {
   ];
 
   await Promise.allSettled([
-    notify(`🏔 NEW INQUIRY — ${name}`, emailBody, smsBody),
+    notify(`🏔 NEW INQUIRY — ${name}`, emailBody, replyToSubmitter(name, email), smsBody),
     postSlack(slackBlocks, `New RMR inquiry from ${name}`),
   ]);
 
