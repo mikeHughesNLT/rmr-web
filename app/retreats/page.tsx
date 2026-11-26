@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Retreats — Red Mountain Retreat",
+  title: "Retreats · Red Mountain Retreat",
   description:
-    "Red Mountain Retreat hosts intimate, intentional retreats for couples, families, and small groups. 25 private acres, 7 bedrooms, Treehouse Sauna, Cedar Hall — Maple Falls, WA.",
+    "Red Mountain Retreat hosts intimate, intentional retreats for couples, families, and small groups. 25 private acres, 7 bedrooms, Treehouse Sauna, and Cedar Hall in Maple Falls, WA.",
 };
 
 export default function RetreatsPage() {
@@ -16,7 +16,7 @@ export default function RetreatsPage() {
       <section className="relative h-[55vh] min-h-[420px] flex items-end">
         <Image
           src="/images/group-outside.jpg"
-          alt="Red Mountain Retreat — group gathering on the deck"
+          alt="Red Mountain Retreat group gathering on the deck"
           fill
           className="object-cover"
           priority
@@ -42,11 +42,11 @@ export default function RetreatsPage() {
         </p>
         <div className="space-y-5 font-sans text-[var(--color-bark)] text-[15px] leading-relaxed">
           <p>
-            Red Mountain Retreat sits on 25 private acres in the foothills of the North Cascades —
+            Red Mountain Retreat sits on 25 private acres in the foothills of the North Cascades,
             far enough from the noise of ordinary life to make the important conversations possible.
           </p>
           <p>
-            The 6,500 sq ft lodge sleeps 14. The Treehouse Sauna perches above the forest floor.
+            The 6,000 ft<sup>2</sup> cabin sleeps 14. The Treehouse Sauna perches above the forest floor.
             Cedar Hall opens onto mountain views. The Steinway sits in the great room.
             There are trails, fire pits, a billiard room, and a kitchen large enough to cook for
             a small army.
@@ -80,7 +80,7 @@ export default function RetreatsPage() {
                 Couples Retreat
               </h2>
               <p className="font-sans text-[var(--color-bark)] text-sm leading-relaxed mb-6">
-                A faith-based marriage enrichment weekend led by Steve &amp; Trudy Samsill —
+                A faith-based marriage enrichment weekend led by Steve &amp; Trudy Samsill,
                 authors and marriage educators with over 35 years of experience. Rooted in Scripture,
                 deeply practical, and set against the backdrop of Red Mountain&apos;s mountains and forest.
                 Participants prepare with seven online video sessions before arriving for two full days
@@ -122,12 +122,15 @@ export default function RetreatsPage() {
             </h3>
             <p className="font-sans text-[var(--color-bark)]/70 text-sm leading-relaxed mb-4">
               Off-site strategy sessions, team-building, or leadership development for groups of up to 14.
-              The lodge provides meeting space, sleeping quarters, and meals under one roof —
+              The lodge provides meeting space, sleeping quarters, and meals under one roof,
               with wilderness at the door.
             </p>
-            <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[var(--color-bark)]/40">
+            <Link
+              href="/contact?interest=leadership%20and%20team%20retreat"
+              className="inline-block border border-[var(--color-forest)]/30 text-[var(--color-forest)] font-sans text-[10px] tracking-[0.3em] uppercase px-5 py-3 hover:bg-[var(--color-forest)] hover:text-[var(--color-cream)] transition-colors"
+            >
               Inquire via contact
-            </p>
+            </Link>
           </div>
 
           {/* Family / wellness placeholder */}
@@ -139,12 +142,15 @@ export default function RetreatsPage() {
               Family &amp; Wellness Retreats
             </h3>
             <p className="font-sans text-[var(--color-bark)]/70 text-sm leading-relaxed mb-4">
-              Extended family gatherings, intentional sabbaticals, or personal renewal —
-              the sauna, trails, and mountain air have a way of resetting what needs resetting.
+              Extended family gatherings, intentional sabbaticals, or personal renewal.
+              The sauna, trails, and mountain air have a way of resetting what needs resetting.
             </p>
-            <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-[var(--color-bark)]/40">
+            <Link
+              href="/book"
+              className="inline-block bg-[var(--color-gold)] text-white font-sans text-[10px] tracking-[0.3em] uppercase px-5 py-3 hover:bg-[var(--color-gold-light)] transition-colors"
+            >
               Book the lodge directly
-            </p>
+            </Link>
           </div>
         </div>
       </section>
@@ -159,14 +165,28 @@ export default function RetreatsPage() {
             {[
               ["25", "Private Acres"],
               ["7", "Bedrooms · Sleeps 14"],
-              ["6,500", "Square Feet"],
-              ["25+", "Miles of Trails Nearby"],
             ].map(([num, label]) => (
               <div key={label}>
                 <p className="font-display text-4xl text-[var(--color-gold)] font-light mb-1">{num}</p>
                 <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-[var(--color-cream)]/60">{label}</p>
               </div>
             ))}
+            <div>
+              <p className="font-display text-4xl text-[var(--color-gold)] font-light mb-1">
+                6,000 ft<sup>2</sup>
+              </p>
+              <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-[var(--color-cream)]/60">cabin</p>
+              <p className="font-sans text-[10px] tracking-[0.15em] text-[var(--color-cream)]/60 mt-2">
+                840 ft<sup>2</sup>{" "}
+                <Link href="/cedar-hall" className="underline decoration-white/30 underline-offset-4 hover:text-[var(--color-gold)]">
+                  Cedar Room
+                </Link>
+              </p>
+            </div>
+            <div>
+              <p className="font-display text-4xl text-[var(--color-gold)] font-light mb-1">25+</p>
+              <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-[var(--color-cream)]/60">Miles of Trails Nearby</p>
+            </div>
           </div>
         </div>
       </section>
