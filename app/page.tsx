@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import HeroVideo from "@/components/HeroVideo";
+
+export const metadata: Metadata = {
+  title: "Red Mountain Retreat · Restore · Reconnect · Rise",
+};
 
 const stats = [
   { value: "7",   label: "Bedrooms" },
@@ -15,7 +20,7 @@ const highlights = [
   { icon: "🏔️", title: "52 Min to Baker",   desc: "Deep powder, legendary snowfall, uncrowded runs." },
   { icon: "🍁", title: "15 Min to Canada",  desc: "Abbotsford crossing. Vancouver day trips are very doable." },
   { icon: "🐾", title: "Dog Friendly",      desc: "25 acres of forest trails. A dog's paradise." },
-  { icon: "⚡", title: "Starlink Wifi",     desc: "Full-speed internet everywhere — including the sauna." },
+  { icon: "⚡", title: "Starlink Wifi",     desc: "Full-speed internet everywhere, including the sauna." },
 ];
 
 const useCases = [
@@ -47,7 +52,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/book"
               className="bg-[var(--color-gold)] text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-[var(--color-gold-light)] transition-colors font-sans">
-              Book Direct — No Fees
+              Book Direct, No Fees
             </Link>
             <Link href="/the-property"
               className="border border-white/50 text-white px-8 py-4 text-sm tracking-widest uppercase hover:border-white hover:bg-white/10 transition-colors font-sans">
@@ -85,7 +90,15 @@ export default function Home() {
           This isn&apos;t a rental.<br />It&apos;s where your people come back together.
         </h2>
         <p className="text-[var(--color-bark)]/80 text-lg leading-relaxed max-w-2xl mx-auto font-sans">
-          A 6,000 sq ft mountain lodge — plus an 840 sq ft Flex Room — on 25 private acres in Maple Falls, WA near the base of Mt. Baker.
+          A 6,000 ft<sup>2</sup> cabin on 25 private acres in Maple Falls, WA, near the base of Mt. Baker.
+        </p>
+        <p className="text-sm leading-relaxed max-w-2xl mx-auto mt-3 font-sans text-[var(--color-bark)]/70">
+          840 ft<sup>2</sup>{" "}
+          <Link href="/cedar-hall" className="underline decoration-[var(--color-bark)]/30 underline-offset-4 hover:text-[var(--color-forest)]">
+            Cedar Room
+          </Link>
+        </p>
+        <p className="text-[var(--color-bark)]/80 text-lg leading-relaxed max-w-2xl mx-auto mt-4 font-sans">
           Seven bedrooms sleep fourteen. Three generations under one roof. Grandparents claim the king suite.
           Kids take the lounge. Everyone meets at the fire.
         </p>
@@ -112,7 +125,7 @@ export default function Home() {
             </h2>
             <p className="text-[var(--color-cream)]/70 font-sans text-sm leading-relaxed">
               Log walls. Stone fireplace. A Steinway grand piano in the corner.
-              This room holds a group — and it knows it.
+              This room holds a group, and it knows it.
             </p>
           </div>
         </div>
@@ -134,7 +147,7 @@ export default function Home() {
           </div>
         </div>
         <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[480px] order-1 md:order-2">
-          <Image src="/images/sauna-interior.jpg" alt="Treehouse sauna interior — cedar, slate, live-edge benches" fill className="object-cover" />
+          <Image src="/images/sauna-interior.jpg" alt="Treehouse sauna interior with cedar, slate, and live-edge benches" fill className="object-cover" />
         </div>
       </section>
 
@@ -170,7 +183,7 @@ export default function Home() {
       <section className="bg-[var(--color-forest)] text-center py-20 px-6">
         <h2 className="font-display text-5xl text-white font-light mb-4">Ready to plan your stay?</h2>
         <p className="text-[var(--color-cream)]/70 mb-8 font-sans text-sm">
-          Book direct — no platform fees, no middleman. Just you and the mountain.
+          Book direct. No platform fees, no middleman. Just you and the mountain.
         </p>
         <Link href="/book"
           className="bg-[var(--color-gold)] text-white px-10 py-4 text-sm tracking-widest uppercase hover:bg-[var(--color-gold-light)] transition-colors font-sans inline-block">
