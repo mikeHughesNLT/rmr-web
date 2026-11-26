@@ -19,7 +19,7 @@ const highlights = [
 ];
 
 const useCases = [
-  { title: "Families",              desc: "Four kings, two queens, separate living areas. Ground-floor access for grandparents. Trails for the kids. Twenty acres means everyone has room." },
+  { title: "Families",              desc: "Four kings, two queens, separate living areas. Ground-floor access for grandparents. Trails for the kids. Twenty-five private acres, plus the owner's adjacent forest trails and activities, so everyone has room to roam." },
   { title: "Retreats & Offsites",   desc: "Seven bedrooms, Starlink, workspace. Treehouse sauna between sessions. Fireplace after dinner. Where teams solve what they couldn't in a conference room." },
   { title: "Celebrations",          desc: "Intimate weddings, milestone birthdays, reunion weekends. Expansive lawn, stone fireplace great room, Steinway. The forest backdrop can't be replicated." },
 ];
